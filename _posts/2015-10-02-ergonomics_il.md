@@ -20,7 +20,7 @@ excerpt: Is there a way we can revise high level language code layout such that 
 
 Here's an example of some troublesome group of not-obvious integer overflows in Java
 
-{% highlight java %}
+``` java
 public static void main(String[] args) {
   /* Lets assume I just pass in any integer argument here, e.g. 1
      So we expect it to print 0x0000000080000000 
@@ -32,11 +32,11 @@ public static void main(String[] args) {
   System.out.println(Long.toHexString(k)); 
   // we unfortunately get 0xffffffff80000000
 }
-{% endhighlight %}
+```
 
 the bytecode ordering can help give us more insight into why this overflows (I've commented below what the crucial bit of the code does for the none-bytecode aficionados)
 
-{% highlight bytecode %}
+``` java
 aload_0
 iconst_0
 aaload
@@ -63,31 +63,32 @@ lload_2
 invokestatic  #7 // Method java/lang/Long.toHexString:(J)Ljava/lang/String;
 invokevirtual #8 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
 return
-{% endhighlight %}
+```
 
 if we then compare this with the solution that makes this code to behave as we expect
 
-{% highlight java %}  
+``` java
 int a = Integer.valueOf(args[0]);
 long k = (long)Integer.MAX_VALUE + a;
 System.out.println(Long.toHexString(k)); // Now we get 0x0000000080000000
-{% endhighlight %}
+```
 
 
-{% highlight bytecode %}
+``` java
 ldc2_w  #5  // long 2147483647l - load the constant from the pool as a wide(long)
 iload_1     // load int from local variable 1
 i2l         // consume integer from stack, extend and push as a long on the stack
 ladd        // add the 2 longs on the stack and return an long<br />
 lstore_2
-{% endhighlight %}
+```
 
 
 OK, so other than being a rubbish Java dev, what is my gripe here?
 >**Could we have a high level language where the flow of code maps to the underlying intermediate language's code flow?**
 
 e.g. why can't the Java look like this, to ensure that by default we don't run into this issue?
-{% highlight java %}
+
+```
 /*
    If we were to lend the := from ALGOL derivatives
    using =: to represent right->left assignment
@@ -96,7 +97,7 @@ e.g. why can't the Java look like this, to ensure that by default we don't run i
 Integer.valueOf(args[0]) =: int a;
 (long)Integer.MAX_VALUE + a =: long k;
 System.out.println(Long.toHexString(k));
-{% endhighlight %}
+```
 
 Seeing the code this way better illustrates that the addition is performed first then it is assigned to the variable.
 

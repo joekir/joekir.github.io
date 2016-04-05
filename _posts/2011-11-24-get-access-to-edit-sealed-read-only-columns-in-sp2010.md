@@ -13,7 +13,7 @@ tags: []
 <p>When using SharePoint content migration software this is really useful because if the column is read-only and sealed you can't write to it! (Unless you do a few tricks... )</p>
 <p><u><strong>Using SharePoint Management Shell (2010):</strong></u></p>
 
-{% highlight powershell %}
+``` powershell
 #Get the web, list and column objects<br />
 $web = Get-SPWeb
 $list = $web.Lists[""]
@@ -26,6 +26,6 @@ $list.Update()
 #Give us the new column settings for our reference
 $column
 $web.Dispose()
-{% endhighlight %}
+```
 
 <p>Click <a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfield_properties.aspx" target="_blank">here</a> for more SPField properties.</p>

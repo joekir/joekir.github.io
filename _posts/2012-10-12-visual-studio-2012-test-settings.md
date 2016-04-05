@@ -24,12 +24,12 @@ I do hope that Microsoft make a move to resolve this issue in service pack 1 as 
 **<u>Test Runner Binding Redirects</u>**      
 I find this strange about the VS2012 Mstest.exe.config. Look at the runtime binding redirect:
 
-{% highlight xml %}
+``` xml
 <probing privatePath="PrivateAssemblies;PublicAssemblies; 
   PrivateAssemblies\DataCollectors;PrivateAssemblies\DataCollectors\x86">
 <assemblyIdentity 
   name="Microsoft.VisualStudio.QualityTools.UnitTestFramework" 
   publicKeyToken="b03f5f7f11d50a3a" culture="neutral">
-{% endhighlight %}
+```
 
 <p>Totally weird, the redirect is basically saying if you call mstest from VS2012 (11+) then you run the VS2010 mstest? It seems ok to do this for VS2010 Service packs, but for a whole new IDE I think a new version of mstest would be good. Again, perhaps they're going for a phased delivery approach.</p>

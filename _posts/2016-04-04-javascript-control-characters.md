@@ -9,14 +9,14 @@ categories:
 ---
 Something odd that I found today, that might disuade developers using Node.js from concatenating user string input.
 
-{% highlight javascript %}
+``` javascript
 var userInput = "\b\b\b\bwhat"; // \b is the backspace control char
 var link = "http" + userInput;
 
 console.log(link);         // "what"
 console.log(link.length);  // 12
-console.log(Buffer(link)); // <Buffer 68 74 74 70 08 08 08 08 77 68 61 74>
-{% endhighlight %}
+console.log(Buffer(link)); // <Buffer 68 74 74 70 08 08 08 08 77 68 61 74>    
+```
 
 The [Node.js Buffer API](https://nodejs.org/api/buffer.html) appears to still be lacking in functions to interrogate the underlying buffer. What I would like to see, is a function that can identify the _"window"_ that console.log function (for example) sees within the Buffer. Or ideally a trim to allow you to decrease the underlying buffer size to the same as the visible ascii string, as currently I can't see a workaround for that when you have a variable length string concatenation.
 

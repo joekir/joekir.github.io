@@ -33,7 +33,7 @@ tags: []
 </ul>
 <p><strong>Here's the code for the console app</strong></p>
 
-{% highlight csharp %}
+``` csharp
  class Program {
         //Give a true or false if a number is a prime
         static bool IsPrimeNumber(Int64 num) {
@@ -60,4 +60,4 @@ tags: []
             }
         }
     }
-{% endhighlight %}
+```

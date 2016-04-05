@@ -25,12 +25,12 @@ The options that you need to change to temporarily disable List View throttlin
 <p><strong><u>Permanently</u> disable throttling using PowerShell</strong></p>
 <p>In the SharePoint Management Shell run the following command against your webapp:</p>
 
-{% highlight powershell %}
+``` powershell
 $web = Get-SPWeb
 $list = $web.Lists[“”]
 $list.Enablethrottling = $false
 $list.Update()
 $web.Dispose()
-{% endhighlight %}
+```
 
 <p>This will permanently disable throttling and cannot be changed using the UI.</p>

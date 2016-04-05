@@ -15,9 +15,9 @@ tags: []
 ---
 In C# I generally don't explicitly write unsafe code (i.e I don't explicitly use the unsafe keyword). However there are some datastructures and algorithm problems that for an optimal solution require that you access raw pointers.I was looking through some of these problems recently and couldn't find any other implementations of an XOR linked list and reversing it in C#. So I thought I'd post it.
 
-<div><a href="http://en.wikipedia.org/wiki/XOR_linked_list" target="_blank">The XOR linked list</a> is a pretty impressive design in my opinion as it has the storage of a linked list but the functionality of a doubly-linked list (i.e. you can move forwards and backwards). I'm not entirely sure what a valid use case of this datastructure is in modern computing, but there may be some application in preventing eavesdropping, as one cannot determine the value by accessing a pointer directly only when traversing in order.Here's my rough sample code in C#:
+The [XOR linked list]("http://en.wikipedia.org/wiki/XOR_linked_list") is a pretty impressive design in my opinion as it has the storage of a linked list but the functionality of a doubly-linked list (i.e. you can move forwards and backwards). I'm not entirely sure what a valid use case of this datastructure is in modern computing, but there may be some application in preventing eavesdropping, as one cannot determine the value by accessing a pointer directly only when traversing in order.Here's my rough sample code in C#:     
 
-{% highlight csharp %}
+``` csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -123,4 +123,5 @@ Unsafe struct ListUtils {
     return previousNode;
   }
 }
-{% endhighlight %}
+```
+

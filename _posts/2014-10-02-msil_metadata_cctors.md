@@ -46,11 +46,11 @@ tags:
 <p>So you can use the name index to check the name the method within the #Strings stream (.Net ususally having 5 streams #~/#-, #Strings,#US,#GUID,#Blob). Then once you've confirmed it's the .cctor, you'll have access to the method's MSIL via the RVA.</p>
 <p>One snag with the design of these List head indices is that the stop condition is defined by either the end of the table or the head index of the next contiguous run of method, fields or params, which will be pointed to by the next row in the parent table.</p>
 <p>Assuming the first method in the list was indeed the static constructor (which sadly it usually is) the goofy, pseudo-SQL would be:
-{% highlight SQL %}
+``` SQL
 SELECT t.name, m.RVA
 FROM Types t INNER JOIN Methods m
    ON m.id = t.mlisthead JOIN Strings s
    ON s.id = m.id
 WHERE s.name = '.cctor'
-{% endhighlight %}
+``` SQL
 _This goofy illustrative SQL was not well thought out, or even tested_

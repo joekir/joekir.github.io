@@ -19,7 +19,7 @@ Libraries like [node-rsa](https://github.com/rzcoder/node-rsa/issues/30) on npm 
 
 As the RegExp constructor in JavaScript doesn't have a timeout feature (which it should!) I thought of a trick using Node.js's core [vm](https://nodejs.org/api/vm.html) module. (available in v0.12.x, v4.x and v5.x branches)
 
-{% highlight javascript %}
+``` javascript
 const util = require('util');
 const vm = require('vm');
  
@@ -42,6 +42,6 @@ try{
 }
  
 console.log(util.inspect(sandbox)); // Check the results
-{% endhighlight %}
+```
 
 Ideally using JavaScript's [protatypal inheritance](http://javascript.crockford.com/prototypal.html) one would overload the RegExp() constructor to include a timeout to tidy away all this code. I didn't go to those lengths here, but perhaps I would in future.

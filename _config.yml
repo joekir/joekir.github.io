@@ -1,12 +1,12 @@
-markdown: redcarpet
-highlighter: null
+markdown: kramdown
 permalink: /:year/:month/:day/:title
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 url: 
 baseurl:
-
-redcarpet:
-  extensions: [strikethrough, tables]
 
 safe: True
 

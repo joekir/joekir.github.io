@@ -17,7 +17,7 @@ tags: []
 <p>So I used PowerShell and its assembly reflection capabilities to enumerate through the lists, libraries and subsites beneath the site and list the permissions levels that the user had.</p>
 <p>Its worth noting that I first wrote this in C# and then manually wrote the PowerShell script based on the C# class. If I had known about <a href="http://josephkirwin.com/2012/01/15/converting-c-into-powershell/" target="_blank">this feature of Reflector v7</a> at that point I could've improved my productivity using reflection. Here's the code I used:</p>
 
-{% highlight powershell %}
+``` powershell
 # Reflects SharePoint dll so we can run against MOSS or SP2010, 
 # note must change the version to 14 for SP2010 or 12 for MOSS!
 [System.Reflection.Assembly]::Load(“Microsoft.SharePoint, 
@@ -56,6 +56,6 @@ foreach ($subweb in $web.webs) {
         $subweb.dispose()
     }
 }
-{% endhighlight %}
+```
 
 <p>The C# equivalent of this script was adapted from code written by <a href="http://stackoverflow.com/questions/2248211/getting-all-sites-lists-and-user-permissions-in-sharepoint">Zincorp on StackOverflow</a></p>

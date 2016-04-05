@@ -12,10 +12,12 @@ categories:
 - SharePoint 2013
 tags: []
 ---
-<p>I had some trouble with some SharePoint webparts and what they seemed to have in common was a base type called the BaseXsltDataWebPart.<br />
-I could resolve it on a case by case basis but ideally I really wanted to know all the types that derived at some point from the BaseXsltDataWebPart. So I wrote this:</p>
+I had some trouble with some SharePoint webparts and what they seemed to have in common was a base type called the BaseXsltDataWebPart.
 
-{% highlight csharp %}
+I could resolve it on a case by case basis but ideally I really wanted to know all the types that derived at some point from the BaseXsltDataWebPart. So I wrote this:     
+
+
+``` csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,7 +47,8 @@ namespace DerivedTypes {
         }
     }
 }
-{% endhighlight %}
+```
 
-It yields a list of all the SharePoint webparts contained in Microsoft.SharePoint and Microsoft.SharePoint.Publishing assemblies that inherit from the base xslt webpart that was causing the issue.<br />
-Interestingly enough if I call .GetTypes() on the assembly it blows up with a reflection error, the stack trace points to dotfuscator, so presumably some sort of anti-ildasm feature is enabled for reflecting private types, still I only needed the publicly surfaced web parts anyway so not a major problem.</p>
+It yields a list of all the SharePoint webparts contained in Microsoft.SharePoint and Microsoft.SharePoint.Publishing assemblies that inherit from the base xslt webpart that was causing the issue.
+
+Interestingly enough if I call .GetTypes() on the assembly it blows up with a reflection error, the stack trace points to dotfuscator, so presumably some sort of anti-ildasm feature is enabled for reflecting private types, still I only needed the publicly surfaced web parts anyway so not a major problem.

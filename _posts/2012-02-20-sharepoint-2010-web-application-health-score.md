@@ -14,7 +14,7 @@ tags: []
 <p>You can obtain the score from a Http response header using F12 dev tools or Fiddler relatively easily, however there doesn't appear to be a property in the SPWebApplication object in the SharePoint API to return the score, so to programmatically obtain the information you have to sniff headers!</p>
 <p>I actually found this PowerShell script on a site of a SharePoint blogger named "Cuban's Bullspit", the site now appears to be taken down, which is unfortunate. The script did not work for me at first as some authentication tweaks were required. In its state below it can now be used to return the X-SharePoint health score from a Http response header to determine the SP Health Score of a given Web Application.</p>
 
-{% highlight powershell %}
+``` powershell
 function Get-SPHealthScore([string]$url){
     $sys = new-object system.Uri($url)
     $request = [System.Net.WebRequest]::Create($sys)
@@ -29,6 +29,6 @@ function Get-SPHealthScore([string]$url){
        Write-Host "The specified URL is not a SharePoint 2010 site or does not contain a health score"
     }
 }
-{% endhighlight %}
+```
 
 <p>Get-SPHealthScore http:<span class="rem">//servername:1234/sites/site</span></p>

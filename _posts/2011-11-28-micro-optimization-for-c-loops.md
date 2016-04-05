@@ -16,17 +16,17 @@ tags: []
 <p>Here's a generalised version of what I did</p>
 <p>Let max be the number that you want to loop until.</p>
 <p><strong>Incremental Loop</strong></p>
-{% highlight csharp %}
+``` csharp
 for (int i = 0; i < max; i++) {
 }
-{% endhighlight %}
+```
 <p><strong>Decremental Loop</strong></p>
 
 
-{% highlight csharp %}
+```
 for (int i = max - 1;  i >= 0;  i--) {
 }
-{% endhighlight %}
+```
 
 <p><u>Things to note</u></p>
 <ul>
