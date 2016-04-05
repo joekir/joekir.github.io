@@ -1,0 +1,25 @@
+---
+layout: post
+title: SharePoint - How to display stack trace error in the browser.
+date: 2011-11-14 23:19:00.000000000 -08:00
+type: post
+published: true
+status: publish
+categories:
+- SharePoint
+tags: []
+---
+<p><em>Here's an oldie, but a goodie!</em></p>
+<p>SharePoint provides "friendly error messages", that are comparable to an inane conversation with a stranger about the weather at the bus stop. <br />For example:<br />"An unexpected error has occurred"     (The plot thickens...)</p>
+<p>Sometimes you just want to know why you can't browse to a SharePoint page, without having to root through ULS/IIS logs on the server.</p>
+<p>To disable these custom error messages:
+<ul>
+<li>On the server find the web application config in question. Usually under C:\inetpub\wwwroot\wss\VirtualDirectories\\web.config</li>
+<li>Backup the web.config</li>
+<li>Open the xml with your favourite text editor (e.g. notepad, notepad++ etc.)</li>
+<li>Search for "<span style="color:red;">CallStack</span>" it should be under the node named &lt;<span style="color:#990000;">SafeMode </span></li>
+<li>Change the callstack attribute's value from "<span style="color:blue;">false</span>" to "<span style="color:blue;">true</span>"</li>
+<li>Search for "<span style="color:red;">customErrors</span>" and change the attribute's value from "<span style="color:blue;">On</span>" to "<span style="color:black;"><span style="color:blue;">Off</span>"</span></li>
+<li>Save the web.config</li>
+</ul>
+<p>Now when you navigate to the contentious page you should get a full stack trace and details!</p>

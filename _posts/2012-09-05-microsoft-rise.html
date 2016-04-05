@@ -1,0 +1,44 @@
+---
+layout: post
+title: Microsoft RiSE
+date: 2012-09-05 20:27:00.000000000 -07:00
+type: post
+published: true
+status: publish
+categories:
+- C#
+- Concurrency
+- Isolation Framework
+- Microsoft Research
+- RiSE
+- Unit Testing
+tags: []
+---
+<p>Wow! This Microsoft Research team are prolific. I've recently become familiar with a family of products that have come out from the <a href="http://research.microsoft.com/en-us/groups/rise/default.aspx" rel="nofollow" target="_blank">RiSE</a> (Research in Software Engineering) team. As a consumer of development tools I really like it when my tools have synergy.</p>
+<p>The tools I have been using are Pex, Moles, Code Contracts, Chess and Sandcastle (not sure if the last one is from that team but it fits in nicely).</p>
+<p>Here's how the tools fitted together pre Visual Studio 2012:
+<ul>
+<li><a href="http://research.microsoft.com/en-us/projects/contracts/" rel="nofollow" target="_blank">Code contracts</a> - allows you to <a href="http://en.wikipedia.org/wiki/Design_by_contract" rel="nofollow" target="_blank">design by contract</a>, providing runtime and static analysis contract inference for your code in Visual Studio.</li>
+<li><a href="http://research.microsoft.com/en-us/projects/pex/" rel="nofollow" target="_blank">Pex</a> - A constraint solver that is based on <a href="http://research.microsoft.com/en-us/um/redmond/projects/z3/" rel="nofollow" target="_blank">MS Research's Z3 solver</a>, this is integrated with the Moles isolation framework and can also take code contracts as constraints.</li>
+<li><a href="http://research.microsoft.com/en-us/projects/moles/" rel="nofollow" target="_blank">Moles</a> - Isolation framework that Pex has knowledge of and can determine upon probing the many paths of the graph where an object is "Moled" or a "Real" object and therefore requires moling.</li>
+<li><a href="http://sandcastle.codeplex.com/" rel="nofollow" target="_blank">Sandcastle</a> - Creates msdn quality documentation for your code API's that can also display code contract assertions. Open source on codeplex.</li>
+<li><a href="http://chesstool.codeplex.com/" rel="nofollow" target="_blank">Chess</a> - Concurrency testing framework that allows you to find and reproduce "Heisenbugs"!</li>
+</ul>
+<div>So what happened to them in Visual Studio 2012?</div>
+<ul>
+<li>Code contracts - moved from Microsoft.Contracts assembly into mscorlib, which indicates that the project was of value to Microsoft and moved to the forefront of .Net</li>
+<li>Pex - No Visual Studio 2012 version available, but the RiSE team have indicated that its coming!</li>
+<li>Moles - Disappointing it has been "discontinued", the project has now been absorbed by the Fakes framework. Downside is that the <a href="http://msdn.microsoft.com/en-us/library/hh549175(v=vs.110).aspx" rel="nofollow" target="_blank">Fakes framework</a> is only available in Visual Studio Ultimate Sku, so that restricts most devs including myself from using it. </li>
+<li>Chess - This one I came across far too late, it is only compatible with VS2008, the RiSE team have indicated that the limitations of updating chess for VS2012 are due to its architecture being very dependent on the blocking semantics of the underlying platform APIs, and that the current architecture not being robust enough to handle the new blocking APIs. Its a brilliant tool that has relevance for testing the new parallel-concurrent-asynchronous programming drive. Its open source on codeplex and I really hope someone (a much better dev than me) in the community has a crack at updating it for VS2012.</li>
+</ul>
+<p>3 things that I hope happen
+<ol>
+<li>
+<div>Microsoft re-thinks restricting their best isolation framework (Moles/Fakes) from the masses.</div>
+</li>
+<li>
+<div>Someone updates the Chess codeplex project for Visual Studio 2012.</div>
+</li>
+<li>Microsoft RiSE team continue with their outstanding work!</li>
+</ol>
+<ul></ul>

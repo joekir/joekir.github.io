@@ -1,0 +1,25 @@
+---
+layout: post
+title: web.config inheritance with Asp.Net
+date: 2011-11-29 18:58:00.000000000 -08:00
+type: post
+published: true
+status: publish
+categories:
+- asp.net
+- IIS
+- webservices
+tags: []
+---
+<p>Imagine you have a website, but when people connect via a webservice to the application you want to change the configuration of how they interact e.g maximum upload size. Well with Asp.Net I found out that you can.</p>
+<p>Providing the Machine.config located at</p>
+<blockquote class="tr_bq"><p><span class="parameter"><em>systemroot</em></span>\Microsoft .NET\Framework\<span class="parameter"><em>versionNumber</em></span>\CONFIG\Machine.config</p></blockquote>
+<p>says that a node can be modified.<br />
+e.g. node in the machine config does not have the setting</p>
+<blockquote class="tr_bq"><p>allowDefintion="MachineOnly"</p></blockquote>
+<p>But instead looks like this</p>
+<blockquote class="tr_bq"><p>&lt;section name="sqlCacheDependency" type="System.Web.Configuration.SqlCacheDependencySection, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" allowDefinition="<strong><span style="color:#000000;">MachineToApplication</span></strong>"/&gt;</p></blockquote>
+<p>Then inheritance applies to that node.<br />
+The important point is that with inheritance the child configuration settings take priority.</p>
+<p>You can even do a underneath a node as noted in this <a href="http://stackoverflow.com/questions/782252/avoid-web-config-inheritance-in-child-web-application-using-inheritinchildapplic" target="_blank">Stack Overflow discussion</a></p>
+<p>Read <a href="http://msdn.microsoft.com/en-us/library/ms178685.aspx#configuration_inheritance" target="_blank">this msdn article</a> for a detailed description of Asp.Net configuration file heirarchy and inheritance.</p>

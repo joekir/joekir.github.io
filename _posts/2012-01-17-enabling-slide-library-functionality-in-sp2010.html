@@ -1,0 +1,19 @@
+---
+layout: post
+title: Enabling Slide Library functionality in SP2010
+date: 2012-01-17 21:40:00.000000000 -08:00
+type: post
+published: true
+status: publish
+categories:
+- Office 2010
+- SharePoint 2010
+tags: []
+---
+<p>In SP2010 you can create custom document libraries that integrate with Microsoft Office xml based documents (docx/pptx/xslx etc.) and allow you to reuse SharePoint Office content. For example the "Slide Library" for reusable PowerPoint slides.</p>
+<p>Here's what you need to do to access these features:
+<ul>
+<li>Enable "SharePoint Server Enterprise Site Features" at the site level</li>
+<li>Enable WebDav support on an end user level, to do this you need to activate the "Desktop Experience" feature on the client OS on which you're using Office 2010</li>
+</ul>
+<p>I always forget that the WebDav integration with SharePoint is not a server setting, its a client setting!</p>

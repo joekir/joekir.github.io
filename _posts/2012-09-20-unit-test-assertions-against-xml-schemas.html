@@ -1,0 +1,32 @@
+---
+layout: post
+title: Unit test assertions against Xml Schemas
+date: 2012-09-20 20:31:00.000000000 -07:00
+type: post
+published: true
+status: publish
+categories:
+- C#
+- Unit Testing
+- Xml
+- Xml Schema
+- XSD
+tags: []
+---
+<p>Some methods that I have needed to test against recently return xml usually as a string. I initially thought that it would be tricky to test against XML but actually most of the tools that you need are available in Visual Studio.</p>
+<p>In my case as I knew that the XML should be of a certain format and knew the constraints of each element and attribute, I was able to first create a XML schema to assert against which is known as a <a href="http://www.w3schools.com/schema/default.asp" rel="nofollow" target="_blank">XSD</a> (XML Schema Document).</p>
+<p>To validate your xml against a schema the xml must contain a namespace correlating to your xsd. As I didn't want to change the actual xml produced by the method in production, I just had to inject the namespace for testing purposes.</p>
+<p>A slight drawback is that most xml passed over the wire, uses attributes extensively and not too many elements. This is valid as it means you can have smaller packets of data that essentially represent the same thing. However when you want to use an xsd to assert against this data there are limitations to the constraints that you can place against an attribute centric xml document: 
+<ul></ul>
+<ul>
+<li><a href="http://www.w3schools.com/schema/schema_simple_attributes.asp" rel="nofollow" target="_blank">XSD Attribute Restrictions</a></li>
+<li><a href="http://www.w3schools.com/schema/schema_facets.asp" rel="nofollow" target="_blank">XSD Element Restrictions</a> (Know as facets)</li>
+</ul>
+<p>So if I want to use the more granular set of constraints to validate the xml its worth running an xslt transform on the xml attributes to convert them to elements then validate against an element centric schema with tighter defined facets.</p>
+<p>Testing process then becomes:
+<ul>
+<li>Transform attribute centric xml to utilize xml elements.</li>
+<li>Dynamically add xsd namespace to xml under test.</li>
+<li>Load xml to a stream with the xmlreader settings that contain the schema and where to throw errors.</li>
+<li>Read the stream back and catch errors to either a list or assert fail on an error being thrown.</li>
+</ul>

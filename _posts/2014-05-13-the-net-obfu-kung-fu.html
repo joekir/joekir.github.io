@@ -1,0 +1,20 @@
+---
+layout: post
+title: The .Net obfu kung-fu
+date: 2014-05-13 12:44:48.000000000 -07:00
+type: post
+published: true
+status: publish
+categories:
+- .Net
+- Anti-Malware
+- Reverse engineering
+tags:
+- .Net
+- Anti-Malware
+- Obfuscation
+---
+<p>Recently, I've been looking into the various types of .Net obfuscation, some commercial obfuscators. But mainly hand rolled anti-disassembly/decompilation.</p>
+<p>Some interesting ones I found today, were where the reflected code would not compile. Meaning that some random opcodes were injected post compilation that are still runtime compatible.</p>
+<p>And also saw ones where non .Net opcodes were injected before a jump non-conditional, effectively padding with junk, so that on linear parsing of the file (top-bottom) dissasembly/decompilation may fail. Whereas for the runtime logical execution it would never encounter such problems.</p>
+<p>Impressive stuff!</p>

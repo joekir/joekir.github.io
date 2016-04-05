@@ -1,0 +1,60 @@
+---
+layout: post
+title: Debugging a process dump with WinDbg, the very basics...
+date: 2011-12-16 21:34:00.000000000 -08:00
+type: post
+published: true
+status: publish
+categories:
+- C#
+- Native Heap Corruption
+- Windbg
+tags: []
+---
+<p>I had an issue this week where a client couldn't open our software because of a <a href="http://www.windowsitpro.com/article/monitoring-and-analysis/heap-corruption-part-1" target="_blank">Native Heap corruption</a>. I had a rough idea that a heap corruption must come from a non-.Net library as .Net has a managed heap with its own garbage collector. Surely enough our software has a C++ assembly within it.</p>
+<p><strong>Getting the process Dump file</strong></p>
+<p>I followed Tess Ferrandez's <a href="http://blogs.msdn.com/b/tess/archive/2010/09/29/capturing-memory-dumps-for-32-bit-processes-on-an-x64-machine.aspx" target="_blank">blog</a> which has brilliant windbg tutorials. I realised that I had to retrieve the dump from the customer, which can be annoying if they're running a 32bit process on a 64bit machine and I need the 32-bit DMP file. This means you can't use process manager and just right click on the process. You have to use procdump from <a href="http://technet.microsoft.com/en-us/sysinternals/dd996900" target="_blank">sysinternals</a>.
+<div>The command to run to get a 32-bit dump of your process is:</div>
+<p>procdump -ma "your32bitprocess.exe”</p>
+<p>This will get a 32-bit dump by default, but you can also specify a 64 bit process dump with procdump.
+<div>   </div>
+<div><strong>WinDbg</strong></div>
+<div>   </div>
+<p>Once you're in WinDbg (Windows Debug), you need to firstly open the .DMP file by choosing "Open crash dump" in the file menu.</p>
+<p>Load in your symbols (if you haven't done so already):</p>
+<p>.sympath+ SRV*c:\Symbols*http://referencesource.microsoft.com/symbols</p>
+<p>Also if you have the Program Databases (.PDBs) from your own .dlls then you can add paths to them to retrieve useful function information, not just binary offsets.</p>
+<p>I used the following selection of commands to leverage some really useful information, however the full suite of commands can be found <a href="http://windbg.info/doc/1-common-cmds.html" target="_blank">here</a>.
+<ul>
+<li>!analyze -v</li>
+<ul>
+<li>Best command for getting an overview of issues that occurred at the moment you snapshotted the memory, windbg attempts to utillise many of its commands to string together a "What just happened" overview for you.</li>
+</ul>
+<li>!clrstack</li>
+<ul>
+<li>.Net (CLR compiler) stack trace</li>
+</ul>
+<li>kb 2000 </li>
+<ul>
+<li>Full stack trace, including native, the number indicates the frames, this can be varied. </li>
+</ul>
+<li>!heap</li>
+<ul>
+<li>What is allocated to the heap</li>
+<li>In my specific scenario, it returned in massive letters "Heap Corruption", which I kind of knew already. But it did confirm.</li>
+</ul>
+<li>!pe </li>
+<ul>
+<li> Print exception, you can add the exception object reference id to the syntax to get a specific exception, otherwise it is just the most recent one.</li>
+</ul>
+</ul>
+<p>Great Debugging References:
+<ul>
+<li><a href="http://windbg.info/doc/1-common-cmds.html" target="_blank">WinDbg Glossary of Terms</a>.</li>
+<li><a href="http://www.codeproject.com/KB/debug/windbg_part1.aspx" target="_blank">Code Project on Debugging</a></li>
+<li><a href="http://blogs.msdn.com/b/tess/archive/2008/02/04/net-debugging-demos-information-and-setup-instructions.aspx" target="_blank">Tess Ferrandez's Blog - Top Microsoft Debugging Expert!</a></li>
+<li><a href="http://channel9.msdn.com/Shows/HanselminutesOn9/Hanselminutes-on-9-Debugging-Crash-Dumps-with-Tess-Ferrandez-and-VS2010" target="_blank">Scott Hanselman interviews Tess Ferrandez on debugging in VS2010</a></li>
+<li><a href="http://hanselminutes.com/186/net-debugging-101-with-tess-ferrandez" target="_blank">Full Hanselminutes interview with Tess Ferrandez</a></li>
+</ul>
+<p>I'll try write up some more on debbuging stuff, as and when I learn more.
+<ul></ul>

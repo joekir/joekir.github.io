@@ -1,0 +1,26 @@
+---
+layout: post
+title: IIS7 and the .Net Assembly Cache
+date: 2012-03-01 18:57:00.000000000 -08:00
+type: post
+published: true
+status: publish
+categories:
+- asp.net
+- IIS
+- IIS7
+- sysinternals
+tags: []
+---
+<p>Someone can set me straight on this if they know more details, but as I understand it in Internet Information Services 6 (IIS6) there wasn't a dynamic assembly cache that was compiled on demand from the contents of the Global Assembly Cache (<a href="http://msdn.microsoft.com/en-us/library/yf1d93sz(v=vs.90).aspx" target="_blank">GAC</a>). This makes troubleshooting assembly loading slightly easier, but the IO read from the GAC probably didn't help on performance, hence the introduction of the .Net assembly cache in IIS7.</p>
+<p>To view the contents of the dynamic IIS7 assembly cache on the server at runtime, you can run process explorer (<a href="http://technet.microsoft.com/en-us/sysinternals/bb896653" target="_blank">procexp</a>), which is part of the <a href="http://technet.microsoft.com/en-us/sysinternals" target="_blank">sysinternals</a> suite (which is awesome!).</p>
+<p>Here's what you need to do step by step:
+<ul>
+<li>Know the name of the IIS site that's loading the assemblies that you are investigating.</li>
+<li>Obtain the process ID for the w3wp process under which that application pool is running.</li>
+<ul>
+<li>To do this you can quickly enumerate the w3wp process names and their procIDs by opening a cmd prompt and typing:</li>
+<p>cd C:\Windows\System32\InetSrv <br />appCmd list wp </ul>
+<li>Once you have the procID open up Process Explorer (procexp.exe) and locate the corresponding w3wp process.</li>
+<li>Right click and select properties, then go to the tab named ".Net Assembly Cache" and there you have it, the dynamic assembly cache contents.</li>
+</ul>

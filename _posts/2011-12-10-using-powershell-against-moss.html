@@ -1,0 +1,16 @@
+---
+layout: post
+title: Using PowerShell against MOSS
+date: 2011-12-10 19:46:00.000000000 -08:00
+type: post
+published: true
+status: publish
+categories:
+- MOSS
+- Powershell
+- SharePoint
+tags: []
+---
+<p>News to me!! I always thought that you couldn't use powershell to script changes to SharePoint 2007.<br />Apparently not. With some simple reflection of the 12 hive assemblies you can load the assemblies like this:</p>
+<p><span style="font-family:Courier New;">[System.Reflection.Assembly]::Load(“Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c”) <br /></span><br /><span style="font-family:Courier New;">[System.Reflection.Assembly]::Load(“Microsoft.SharePoint.Portal, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c”)</span> </p>
+<p>Then you are free to call the SharePoint object model with PowerShell, however you please.</p>

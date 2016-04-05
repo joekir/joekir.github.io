@@ -1,0 +1,19 @@
+markdown: redcarpet
+highlighter: null
+permalink: /:year/:month/:day/:title
+
+url: 
+baseurl:
+
+redcarpet:
+  extensions: [strikethrough, tables]
+
+safe: True
+
+sass:
+  sass_dir: public/css
+  style: :compressed
+
+twitter_username: josephkirwin
+github_username:  joekir 
+linkedin_username: joekirwin 

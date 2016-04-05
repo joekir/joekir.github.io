@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<article class="single row gutters">
+  <time class="published" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time>
+  <h2>{{ page.title }}</h2>
+
+  {{ content }}
+</article>
+
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>

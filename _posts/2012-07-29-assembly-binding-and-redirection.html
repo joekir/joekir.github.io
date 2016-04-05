@@ -1,0 +1,22 @@
+---
+layout: post
+title: Assembly Binding and Redirection
+date: 2012-07-29 20:41:00.000000000 -07:00
+type: post
+published: true
+status: publish
+categories:
+- Assemblies
+- C#
+- Configuration
+tags: []
+---
+<p>Here's a scenario that I was having trouble with this week.<br />
+<blockquote class="tr_bq">You have an application that requires the assemblies to be versioned for each build. A third party wants to write a "plugin" that is called by your application that references assemblies from a particular version of the application's assemblies. How do you make the plugin useful for future builds without the need for re-compilation?</p></blockquote>
+<p>Firstly, there are some amazing tools available from Microsoft to help debug these types of issues:
+<ul>
+<li><a href="http://msdn.microsoft.com/en-us/library/e74a18c4(v=vs.71).aspx" target="_blank">Fusion Log Viewer (fuslogvw.exe)</a> - this allows you to see a log of all the assembly bindings for your application at runtime. Called Fusion as this was a prototype name for the CLR I think.</li>
+<li><a href="http://msdn.microsoft.com/en-US/library/2bc0cxhc(v=vs.80)" target="_blank">.NET Framework Configuration Tool (mscorcfg.msc)</a> - This tool allows you to see the current dependencies of your application and any <a href="http://msdn.microsoft.com/en-us/library/7wd6ex19" target="_blank">binding version redirects</a> or codebase redirects that you have in place. It also can dynamically edit the runtime configuration file of your application so that it has the bindings and redirects that you have specified in the GUI. You can also set what type of garbage collection the application will use, <a href="http://msdn.microsoft.com/en-us/library/ee787088.aspx#workstation_and_server_garbage_collection" target="_blank">server or workstation</a> (mscorsrv.dll or mscorwks.dll), which is not related but also useful.</li>
+</ul>
+<p>What was interesting in this scenario was I was expecting to put the redirection on the plugin assembly. But actually I found that the publisher policy has to be set by the calling application. This is likely to be due to the fact that you can only have one set of policies per app domain and as the plugin was not sectioned off in its own app domain, it had to share with the parent. Hence it needed to be set at that level.</p>
+<p>Once I had configured the version redirection in the parent application the plugins were able to run in versions that the plugin wasn't designed for. However if an interface or method changes down the line, well that's another story.</p>

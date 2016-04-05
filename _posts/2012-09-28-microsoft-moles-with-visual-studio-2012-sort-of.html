@@ -1,0 +1,46 @@
+---
+layout: post
+title: Microsoft Moles with Visual Studio 2012... Sort of.
+date: 2012-09-28 18:24:00.000000000 -07:00
+type: post
+published: true
+status: publish
+categories:
+- Configuration
+- Microsoft Research
+- Moles
+- Unit Testing
+tags: []
+---
+<p>I think <a href="http://research.microsoft.com/en-us/projects/moles/" rel="nofollow" target="_blank">Microsoft Moles</a> is one of, if not the best software testing isolation framework available for C#.Net, the only near rival that can mock and stub non-virtual classes and other difficult to isolate objects is <a href="http://www.typemock.com/isolator-product-page" rel="nofollow" target="_blank">Typemock isolator</a>. Which, at its very cheapest and feature barren is still around $800, whereas Moles <b><u>was</u></b> free!</p>
+<p>So in Visual Studio 2012 they aren't releasing the Moles package and instead including all the tooling with the <a href="http://msdn.microsoft.com/en-us/library/hh549175.aspx" rel="nofollow" target="_blank">Fakes framework</a>, which is only in Visual Studio Ultimate edition <a href="http://www.microsoftstore.com/store/msstore/en_US/pd/Visual-Studio-Ultimate-2012-with-MSDN/productID.252989100" rel="nofollow" target="_blank">aka $13000</a>.</p>
+<p>So for us poorer developers, if we want to use Moles in Visual Studio 2012. We have 2 options:
+<div>
+<ol>
+<li>Figure out how to deploy the Moles Host Adapter in Visual Studio 2012 - My attempts at this have failed so far, if anyone has figured this option out let me know!</li>
+</ol>
+<ul></ul>
+<li>
+<div>Create an External Tool in Visual Studio 2012.</div>
+</li>
+<p>For the second option, in VS2012 go to Tools -&gt; External Tools...<br />You can then call the Moles runner which in turn can call the <a href="http://www.nunit.org/index.php?p=download" rel="nofollow" target="_blank">NUnit runner </a>or the <a href="http://msdn.microsoft.com/en-us/library/ms182489(v=vs.80).aspx" rel="nofollow" target="_blank">Mstest runner</a>, or your chosen framework.</p>
+<p><u>Moles and NUnit example</u><u><br /></u>
+<div class="separator" style="clear:both;text-align:center;"><a href=""{{ site.baseurl }}/assets/c67ef-nunitandmoles.png" style="clear:left;float:left;margin-bottom:1em;margin-right:1em;"><img alt="Nunit and Moles External Tool" border="0" height="316" src="{{ site.baseurl }}/assets/c67ef-nunitandmoles.png" title="Nunit and Moles External Tool" width="320" /></a></div>
+<p>Command - Add the Moles.runner.exe path<u><br /></u>
+<div style="text-align:left;">Arguments -  /runner: /args="/domain=None"</div>
+<div style="text-align:left;"></div>
+<div style="text-align:left;">Initial Directory - Bin directory of the build output for the test project.</div>
+<div style="text-align:left;"></div>
+<div style="text-align:left;"></div>
+<div style="text-align:left;"></div>
+<div style="text-align:left;"></div>
+<div style="text-align:left;"></div>
+<div style="text-align:left;"></div>
+<div style="text-align:left;"></div>
+<div style="text-align:left;"></div>
+<div style="text-align:left;"></div>
+<div style="text-align:left;">For NUnit its also necessary to build the Nunit sample from the moles install with the same version of NUnit that you plan to use. Then you can add a reference to Microsoft.Moles.NUnit and a using of Microsoft.Moles.Framework.NUnit. Methods just need the [Moled] attribute when you want to run them in the Moles host.</div>
+<div style="text-align:left;">Then when you run the External Tool you created e.g. "Run NUnit and Moles", it outputs results to the output window in Visual Studio.
+<div class="separator" style="clear:both;text-align:center;"><a href="{{ site.baseurl }}/assets/98707-outputwindow.png" style="clear:left;float:left;margin-bottom:1em;margin-right:1em;"><img alt="Output Window" border="0" height="303" src="{{ site.baseurl }}/assets/98707-outputwindow.png" title="Output Window" width="400" /></a></div>
+<p>Any way to use the power of Moles in VS2012 is a step in the right direction!</p></div>
+</div>

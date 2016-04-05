@@ -1,0 +1,34 @@
+---
+layout: post
+title: reg(ular|ex) (expressions)?
+date: 2013-02-09 22:24:00.000000000 -08:00
+type: post
+published: true
+status: publish
+categories:
+- Regex
+- Regular Expressions
+tags: []
+---
+<table cellpadding="0" cellspacing="0" class="tr-caption-container" style="height:227px;margin-left:auto;margin-right:auto;text-align:center;width:604px;">
+<tbody>
+<tr>
+<td style="text-align:center;"><a href="http://josephkirwin.files.wordpress.com/2013/02/panorama_stitch_egypt_333793_o.jpg" style="clear:right;margin-bottom:1em;margin-left:auto;margin-right:auto;"><img alt="Stela of Ameny Top" border="0" height="188" src="{{ site.baseurl }}/assets/334d4-panorama_stitch_egypt_333793_o.jpg" title="Stela of Ameny Top" width="600" /></a></td>
+</tr>
+<tr>
+<td class="tr-caption" style="text-align:center;"><a href="http://www.everystockphoto.com/photographer.php?photographer_id=39509" target="_blank">Photograph by Tostie14</a> <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">(Creative Commons)</a></td>
+</tr>
+</tbody>
+</table>
+<p>Each time I revisit regular expressions after not using them for a while it feels like reading hieroglyphics, but then I remember I can somehow read these ancient runes!</p>
+<p>Writing regex from scratch is incredibly enjoyable and rewarding. Refactoring and improving the specificity of the match pattern will improve the performance usually. Trying to capture as many groups as you can without OR-ing will also improve the performance and that in itself is great fun.</p>
+<p>Then there's the snag, "I pity the fool that has to debug and maintain that terse string, I Do!"</p>
+<p>There must be a way to make these things maintainable. I haven't quite worked out what it is yet, perhaps you should piecewise compose the string with comments on the intended use. Or maybe just write a block comment above saying what strings you are actually trying to get hold of, then when it comes to extending or maintaining, the next person can just throw the old expression in the bin and write a new one which matches everything you needed previously and the new stuff. It sounds really inefficient however it seems that knowing <b><u>what</u> </b>someone was trying to do in the code, is more useful than knowing <u><b>how</b></u> they went about it.</p>
+<p>The power of being able to objectify unstructured data feels like you are creating something from nothing. Which is why it feels so rewarding because you are.</p>
+<p>Some great regex references
+<ul>
+<li><a href="http://gskinner.com/RegExr/" target="_blank">RegExr - Probably the best online regular expression verifier</a></li>
+<li><a href="http://www.regular-expressions.info/catastrophic.html" target="_blank">Catastrophic Backtracking - How regex gets nasty</a></li>
+<li><a href="http://msdn.microsoft.com/en-us/library/gg578045.aspx" target="_blank">Best practices for regular expressions in the .Net framework</a></li>
+</ul>
+<p></p>

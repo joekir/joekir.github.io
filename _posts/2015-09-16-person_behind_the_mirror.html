@@ -1,0 +1,39 @@
+---
+layout: post
+title: the person(s) behind the mirror
+date: 2015-09-16 15:20:44.000000000 -07:00
+type: post
+published: true
+status: publish
+categories:
+- .Net
+- Anti-Malware
+- C#
+tags:
+- .Net
+- Anti-Malware
+- Human Behaviour
+- MSIL
+excerpt: A story from an experience I had as an AV analyst.
+---
+<p>In my short, but highly educational 12 month employment as a malware analyst, the question that most intrigued me was “<em>what does the process look like for the people writing it</em>?”.</p>
+<p>There was only one time I recall when I could successfully probe that process to better understand it. My speciality was analysing Microsoft .Net malware, due to this I knew some of the tricks that malware authors would employ.</p>
+<p>In the AV lab we started seeing some .Net samples that were very similar in code smell and intent. When we published some simple byte matching detection, it appeared that an “automated system” on that attacker's side would modify the previous version by doing some simple code manipulation that didn't change the functionality of the malware, but broke our detection signature.</p>
+<p>It's my observation that the malware industry is a game of minimum resource utilization. The malware authors, don't want to give away their best tricks, if they don't have to. From an economic perspective it would not be prudent to reveal more than one trick at once, that way they can maximize the opportunity of each trick. So they begin each "campaign", as simple as possible.</p>
+<p>Similarly on the anti-malware side, most traditional AV uses a mixture of signature based detection and behaviour based detection. On first seeing a new-looking sample, they would usually respond with a simple byte-match as they have very limited time that they can spend on each sample, due to the large volume of sample submissions. If that works for a short period of time, then that is a win for them, and they can revisit the issue more aggressively if the detection is broken.</p>
+<p>Back to the story... As I had the knowledge of .Net I could write some more complex detection algorithms and emulation which were more difficult for the malware to break. The feedback loop for the malware authors was most likely a site called virustotal.com (or some variant) this allows a user to upload a potential malware file to it, and see which AV vendors detect it. So there is no real need in this day-and-age for a malware author to have a version of each vendor's AV scanner, they can just use the feedback from virustotal.</p>
+<p>Therefore it's not a hard stretch of the imagination to think that malware producers could set up an automated malware publishing system (AMPS) that releases a piece of malware. Then polls virustotal until one vendor in the list detects it. Once detected, it manipulates the code while maintaining the same functionality, using virustotal as its "testing framework" until it is not detected. From what I could tell, if the AMPS failed then a team that I'll call “the crew” was alerted for some manual intervention.</p>
+<p>The response time of the crew was slower than the AMPS (<em>at worst the crew's response time was about 14 hours</em>), I was able to roughly measure this by noting that a more aggressive (False-Positive prone but not False-Negative prone) , internal-only signature that I had written, did not fire on any new samples during that window. As the AV engine already had behavioural protection for this malware, there wasn't a great risk to customers by experimenting; releasing a simple detection signature and measuring the response time. Then releasing a complex detection signature, and measuring the response time.</p>
+<p>The crew had a big bag of tricks, either it was one guy that was very disciplined. Or it was a hierarchy of junior and senior coders. The first set of tricks, I was able to address quickly. But then as the complexity of my detections improved, the crew pulled out some new tricks that I hadn't seen before (this was a fantastic learning experience!!).</p>
+<p>Due to the follow-the-sun approach of how most AV labs work, there was another experiment that could have been conducted. What time zone were the attackers based in? Or were they globally distributed. This was something unfortunately that I didn't have available time to test.</p>
+<p>Some follow-up questions or future research:</p>
+<ul>
+<li>There was a difference in time between the AMPS response and crew response, can this metric be used to identify which malware deserves more attention, due to the time you gain in making the crew have to work?</li>
+<li>Can you figure out the size of opponent's team?</li>
+<li>Is it possible to identify the skill levels of each member, or even have the ability to distinguish who wrote which change?</li>
+<li>Are there cases where the crew are very slow to respond. Can defenders leverage this to their advantage?</li>
+<li>What time zone are they based in, or are they a distributed team. What can you do with this knowledge?</li>
+<li>I also observed that no detection was broken on a weekend<em>,</em> this could infer that they didn't work on a weekend.</li>
+</ul>
+<p>Understanding the response process of an “opponent” is an important part of malware analysis, that appears to be mostly overlooked. Tools like virustotal, while providing a great resource to defenders, offer a similar level of assistance to attackers.</p>
+<p>The software is just a tool that people use to achieve their goals (good or bad), it still requires maintenance. the malware author's version of a software bug report, is detection on virustotal.</p>

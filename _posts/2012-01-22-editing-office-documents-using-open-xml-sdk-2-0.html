@@ -1,0 +1,17 @@
+---
+layout: post
+title: Editing Office documents using Open XML SDK 2.0
+date: 2012-01-22 13:17:00.000000000 -08:00
+type: post
+published: true
+status: publish
+categories:
+- Office 2010
+- Open Xml
+- SharePoint 2010
+tags: []
+---
+<p>In SharePoint 2010 Office documents are now much more integrated, such that you can have for example a "Slide library" document library in a publishing SharePoint site. That contains <a href="http://office.microsoft.com/en-us/powerpoint-help/use-slide-libraries-to-share-and-reuse-powerpoint-slides-HA010338394.aspx">reusable slides for PowerPoint</a> and this library can be updated from the users PowerPoint client.</p>
+<p>However when migrating these documents to a new SharePoint platform, you can be posed with the issue of updating the static URL reference from the old library to the new one.</p>
+<p>Thankfully Microsoft provide something called the <a href="http://www.microsoft.com/download/en/details.aspx?id=5124">Open XML SDK</a> and you can find great tutorials and documentation <a href="http://msdn.microsoft.com/en-gb/office/bb265236.aspx">here</a>. </p>
+<p>The SDK includes the dlls required to interact with any xml based Office document (docx/pptx/xlsx etc.) and also a reflector tool that can reflect the Office document into the C# code to create it. This is highly useful for stepping through the document object model to see what is inherited and how to make changes. I'm still perfecting the code to modify the reference to the SharePoint slide library, once I've got it I'll add to this post.</p>

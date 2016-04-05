@@ -1,0 +1,50 @@
+---
+layout: post
+title: Client Side SSL with SharePoint
+date: 2013-02-20 21:24:00.000000000 -08:00
+type: post
+published: true
+status: publish
+categories:
+- Client Side SSL
+- IIS
+- IIS7
+- Self Signed SSL
+- SharePoint
+- SharePoint 2010
+- SharePoint 2013
+tags: []
+---
+<table cellpadding="0" cellspacing="0" class="tr-caption-container" style="float:right;margin-left:1em;text-align:right;">
+<tbody>
+<tr>
+<td style="text-align:center;"><a href="http://josephkirwin.files.wordpress.com/2013/02/stockvault-love-locks125961.jpg" style="clear:right;margin-bottom:1em;margin-left:auto;margin-right:auto;"><img border="0" height="266" src="{{ site.baseurl }}/assets/53f5f-stockvault-love-locks125961.jpg" width="400" /></a></td>
+</tr>
+<tr>
+<td class="tr-caption" style="text-align:center;"><a href="http://www.stockvault.net/user/profile/87395" target="_blank">Photograph by 2happy</a> <a href="http://www.stockvault.net/terms-of-use" target="_blank">(Attribution)</a></td>
+</tr>
+</tbody>
+</table>
+<p>In the words of many of the InfoSec gurus, "Implementing SSL is HARDDD!". No seriously, implementing Client Side SSL with IIS and SharePoint can be time consuming and frustrating.</p>
+<p>Client Side SSL is for the server to validate you, not for you to validate it. (The later is called server side SSL).</p>
+<p>Here's some great references and filler to cover the lack of detail on certain aspects.</p>
+<p>Here's how I understand client side certificates, and understanding the relationships helped me work through the technical implementation. The explanation below is probably leaving me wide open to get pwned by a troll. But anyway:
+<ul>
+<li>You need to create a server certificate (a.k.a an X.509 cert) and and a private key (a.k.a digital ID). This is pair is used to generate client cert key pairs. You never reveal the server private key to the client or the game is over.</li>
+<li>Add the certificate to your IIS7 server certificate store and bind it to an IIS website, in this case a SharePoint Web Application under https and a valid port. Set the site to accept certificates and require SSL.</li>
+<li>Create a client certificate (.cer) and a client key (.pvk) {This should be different from the server private key}</li>
+<li>Bind those together to make a PKCS #12 file (.pfx) which allows you to redistribute the certificate private key pair as one file, with a password preferably. </li>
+<li>Then you give the pfx and the server certificate (.cer) to the client user, telling them to add the .pfx to their personal certificate store and the server certificate to the Trusted Root Authority Store of the <u>local machine</u>.</li>
+</ul>
+<p>Most of the technical details for implementing the above is covered in great detail in the following brilliant blog article:<a href="http://ondrej.wordpress.com/2010/01/24/iis-7-and-client-certificates/" target="_blank"> http://ondrej.wordpress.com/2010/01/24/iis-7-and-client-certificates/ </a></p>
+<p>The SharePoint extras:
+<ul>
+<li>Alternate access (AAM) mapping hell - The certificate that I had generated was under the fully qualified name of my server e.g. myserver.domain.internal which is annoying as it means that https requests to that site must be on https://myserver.domain.internal:4444 (some arbitrary port). Its a bad looking url!</li>
+<li>The trick here is that you need to add an external url reference for the fully qualified name in the <u>custom</u> section. This can then be mapped to whatever internal url you need. (for <a href="http://en.wikipedia.org/wiki/SSL_termination_proxy" target="_blank">SSL termination</a> etc.)</li>
+</ul>
+<p>That should do it if you browse to the site remotely with the pfx and cer in place then you should be ok. There may be issues with the name on the cert not matching the destination. But that seems par for the course.</p>
+<p>Other noteworthy references:
+<ul>
+<li><a href="http://weblogs.asp.net/scottgu/archive/2007/04/06/tip-trick-enabling-ssl-on-iis7-using-self-signed-certificates.aspx" target="_blank">http://weblogs.asp.net/scottgu/archive/2007/04/06/tip-trick-enabling-ssl-on-iis7-using-self-signed-certificates.aspx </a></li>
+<li><a href="http://www.robbagby.com/iis/self-signed-certificates-on-iis-7-the-easy-way-and-the-most-effective-way/">http://www.robbagby.com/iis/self-signed-certificates-on-iis-7-the-easy-way-and-the-most-effective-way/</a></li>
+</ul>
