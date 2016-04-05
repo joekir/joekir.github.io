@@ -34,7 +34,7 @@ Has a unique solution.
 
 let's change our x to be an array of bits, as that's what it really is.
     
-$$(x\_{0..n} >> y) \oplus x\_{0..n} = z$$
+$$(x_{0..n} >> y) \oplus x_{0..n} = z$$
 
 what we can reason about this here is that \\(x\_{0..n} &gt;&gt; y\\) when xor'd with \\(x\_{0..n}\\) we're actually solving **n** simple simultaneous equations of the form
 
@@ -50,18 +50,22 @@ ok, so now to write this out in pseudo-binary-goofy-stupid-me-notation:
 
 $$({x_0 x_1 x_2 x_3} >> 2) \oplus {x_0 x_1 x_2 x_3} = 1000$$
 
-Simplifying to
+Simplifying to    
 
 $${0 0 x_0 x_1} \oplus {x_0 x_1 x_2 x_3} = 1000$$
 
-now we can see that the following equations need to be satisfied
+now we can see that the following equations need to be satisfied     
 
 $$0 \oplus x_0 = 1 \therefore x_0=1 $$
+
 $$0 \oplus x_1 = 0 \therefore x_1=0 $$
+
 $$x_0 \oplus x_2 = 0 \text{ substituting } x_0 \implies x_2=1$$ 
+
 $$x_1 \oplus x_3 = 0 \text{ substituting } x_1 \implies x_3=0$$
 
 Checking the solution for b1010 aka 10 decimal
+
 $$(10 >> 2) \oplus 10 = 8$$
 
 **Why is that important?**    
