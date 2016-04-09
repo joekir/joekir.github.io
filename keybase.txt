@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/joekirwin
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.josephkirwin.com
+  * I am joekirwin (https://keybase.io/joekirwin) on keybase.
+  * I have a public key with fingerprint 1B3E 55CA FB40 6C6B 6E34  AD3B 18C1 8EC7 1A6C 32A6
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101e6f75bfe038d41da01a297c4a84b928cdcb759db8098bf1add796eee9721cdf30a",
+            "fingerprint": "1b3e55cafb406c6b6e34ad3b18c18ec71a6c32a6",
+            "host": "keybase.io",
+            "key_id": "18c18ec71a6c32a6",
+            "kid": "0101e6f75bfe038d41da01a297c4a84b928cdcb759db8098bf1add796eee9721cdf30a",
+            "uid": "004a418d0339da917179a8c5c4283119",
+            "username": "joekirwin"
+        },
+        "service": {
+            "hostname": "www.josephkirwin.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1460178706,
+    "expire_in": 157680000,
+    "prev": "197c4c22c416808747b1798ca789fbdd5d8d370ea3f11d2d709a07f08373eae3",
+    "seqno": 11,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.53
+Comment: https://keybase.io/crypto
+
+yMIyAnicrZJbSBVBGMePeU4XKYygwOgi20UztZ3dPTuzQlEohChBJgQhnmZnZj2b
+unvcs+dYiEmaBBUqGkQFlUhR0eUhDAnSsotWdHqooHtKRmJEUWgZBM1avfXYvAzz
+zf/7zf/7M7fmJPtSku6eHd/b33xkZdL9Gydjvq0zW+fVCbpNdwl5dUIlm9pYFWVR
+N1RpUiFPEIEImGrAoG4wUUZUARSLAEsaJApGiq5JiFCiw6BGdSRqSDcAphRqKmNM
+gxIg1JBFLGQLhmlVMCfimJbLsUCXWTBIsKErokpUXWWygqmsA0QAYgQCrBJZwipv
+DNtRr4Ob03GU5Zo2r/FDaMreP/T/2XfsN05UsAIQFWVZo1gDEEANIxIkioRkADRP
+GGWOhasZV++wWaXp1JqWUJ8t8HLcJMxL1hvlj6S2tjZ3hx1lkfBvZS6xqzkk4tiu
+Tewqrgi7biTPA7i7IlMdTA/9YYV006I8T94QZ07UtC0hD3AlcU0PDhRVBBBBUc0W
+2M6I6bCQ6SmCUEUiX94zLO6l56VBJIkogN8gqECdz4UIhkgzdEqDFFEZigzLBgBU
+olDUsAgNEclQZpjJgjddjWVzNuA+cQVnRs0KC7sxhwn1/dfL/L6kFN/0wDTvo/lS
+Zs39+/0eFMz03bgs3E/r6rtYtuXmglsfWoaPdQbGOva9LR7tLJ39rTdnJLEip2Zt
+YXpkUX3+w/WnssYO+1c0DQ0kjqrbHlS8+vxx6HT6o0uDJaUzThybkXJ+PBD93rIh
+vu32GmvhHTivd7L96fnCu4GStROXrrB2lLGxKnm7P3m4d9W1nxkFI2B3VtfY6GhZ
+bLncsHz+5ZyktoHtP1z/nuJnLw+FiwZev+nuWPL8U06X/91g2wE90fq4vO9R7MLX
+zd09r3+Gtyzuqc/vTAQ2rkw+MHkPB8rh+niRXJzlNB+fu+x02sF1jd0dTUNnGl68
+zyyUvjSn9gfCVyfSNqUefDL4vG/p5P5zmYn0xtXX5v8CmUtG9g==
+=9W5o
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/joekirwin
+
+==================================================================
