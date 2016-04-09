@@ -8,7 +8,8 @@ kramdown:
 url: 
 baseurl:
 
-safe: True
+gems:
+  - jekyll-sitemap
 
 sass:
   sass_dir: public/css
