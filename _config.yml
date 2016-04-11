@@ -5,7 +5,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-url: 
+url: http://www.josephkirwin.com
 baseurl:
 
 gems:
