@@ -48,11 +48,11 @@ I clearly wasn't the only one dismissing MD5withRSA as insecure, [F-Droid](https
 
 The apk is a jar really, it uses a variant of jarsigner ([SignApk](https://android.googlesource.com/platform/build/+/7e447ed/tools/signapk/SignApk.java)) to create its certificates.
 
-When dealing with apk signing, the directory of interest inside the apk is:
-/META-INF/
-  - MANIFEST.MF
-  - CERT.SF
-  - CERT.RSA
+When dealing with apk signing, the directory of interest inside the apk is:     
+/META-INF/     
+  - MANIFEST.MF     
+  - CERT.SF     
+  - CERT.RSA     
 
 The CERT.SF contains digests of all the objects that need to be signed, these are SHA1 or better usually. This somewhat duplicates the MANIFEST.MF contents and even contains a digest of the manifest itself. CERT.RSA is then the signature over CERT.SF. (Note the hashing is used, as digital signatures can only sign a limited amount of data efficiently and hashing helps thunk the size down) 
 
@@ -61,13 +61,13 @@ _If (unlike linux) for you more is better than less you can checkout [nelenkov's
 ### Why I think Google's decision to not upgrade MD5 is a fine and secure one
 
 There are 3 categories of attack on a hash algorithm.
-1. pre-image attack
+1. pre-image attack     
    ```Given hash(message1) it is difficult to find message1```
-2. second pre-image attack
+2. second pre-image attack     
    ```
    Given message1 it should be difficult to find a message2 such that ```    
    ```hash(message1) == hash(message2) and message1 != message2 ``` 
-3. collision attack
+3. collision attack     
   ```Choose a message1 != message2 where hash(message1) == hash(message2)```
 
 MD5 is not known to be weak to 1 or 2. But it is weak to 3, and there is a special case for hash functions using [merkle-damgard constructions](https://en.wikipedia.org/wiki/Merkle%E2%80%93Damg%C3%A5rd_construction), of a ["chosen prefix collision attack"](http://www.mathstat.dal.ca/~selinger/md5collision/).
