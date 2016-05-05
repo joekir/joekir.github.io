@@ -60,15 +60,15 @@ _If (unlike linux) for you more is better than less you can checkout [nelenkov's
 
 ### Why I think Google's decision to not upgrade MD5 is a fine and secure one
 
-There are 3 categories of attack on a hash algorithm.
+There are 3 categories of attack on a hash algorithm.     
 1. pre-image attack     
-   ```Given hash(message1) it is difficult to find message1```
+   ```Given hash(message1) it is difficult to find message1```     
 2. second pre-image attack     
    ```
    Given message1 it should be difficult to find a message2 such that ```    
-   ```hash(message1) == hash(message2) and message1 != message2 ``` 
+   ```hash(message1) == hash(message2) and message1 != message2 ```      
 3. collision attack     
-  ```Choose a message1 != message2 where hash(message1) == hash(message2)```
+  ```Choose a message1 != message2 where hash(message1) == hash(message2)```    
 
 MD5 is not known to be weak to 1 or 2. But it is weak to 3, and there is a special case for hash functions using [merkle-damgard constructions](https://en.wikipedia.org/wiki/Merkle%E2%80%93Damg%C3%A5rd_construction), of a ["chosen prefix collision attack"](http://www.mathstat.dal.ca/~selinger/md5collision/).
 
