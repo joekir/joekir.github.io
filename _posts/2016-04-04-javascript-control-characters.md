@@ -2,7 +2,7 @@
 layout: post
 title: How JavaScript control characters impact the underlying Buffer 
 type: post
-published: true
+published: false
 status: publish
 categories:
 - JavaScript
