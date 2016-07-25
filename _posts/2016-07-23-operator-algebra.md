@@ -14,7 +14,7 @@ I read a book that stated a classic brain teaser recently:
   <summary>  
 Given the numbers 1,3,4 and 6 total 24 using any operators (including parentheses), you must use each number only once.<i>(hint: expand for answer)</i>
   </summary>
-   Solution: $$\frac{6}{(1-3/4)}=24$$
+  <p>Solution: <script type="math/tex">\frac{6}{(1-3/4)}=24</script></p>
 </details><br/>
 
 It's not too easy to express this as a formula, but I like 
