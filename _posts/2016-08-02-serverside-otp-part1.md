@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Serverside one-time-pad
+title: Serverside One-Time-Pad (Part1)
 type: post
 published: true
 status: publish
@@ -9,7 +9,8 @@ categories:
 - identity
 ---
 
-***If a company/person has already created this, please tweet at me, as I wasn't aware of it at the time of writing.***
+***N.B. I've since written a [Part2](/2016/08/05/serverside-otp-part2/) to this, to address some original implementation concerns.***
+
 
 It has become almost normal to see 2-factor-authentication on many of the most popular sites on the internet. The strongest of these schemes are the offline schemes: Time-Based One-Time Password ([TOTP](https://tools.ietf.org/html/rfc6238)) and Event-Based One-Time Password (EOTP/[HOTP](https://www.ietf.org/rfc/rfc4226.txt)).
 
@@ -56,4 +57,4 @@ The user could then check that the server code was correct, prior to inputting t
 
 From the attacker's perspective, this means that with phishing they could still successfully capture the user's username/password. But they may not be able to obtain the TOTP code, as the user would have a decent metric to detect a server-side forgery. The user could then change their password after this event of distrust occured. 
 
-*Sidenote, I've also been looking into Zero-knowledge-password-proof (ZKPP) schemes to acheive server and client mutual agreement on passwords. Its a bit more involved than this solution though, I guess I'll detail that later.*
+*Sidenote, I've also been looking into Zero-knowledge-password-proof (ZKPP) schemes to acheive server and client mutual agreement on passwords. It's a bit more involved than this solution though, I guess I'll detail that later.*
