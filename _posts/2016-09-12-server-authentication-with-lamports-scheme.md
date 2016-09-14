@@ -39,6 +39,7 @@ If this comparison is false (and the solution is engineered adequately) then it'
 *The bootstrapping sequence server side would need to be:*              
 $$hash_{1} = hash(IP|random)$$           
 $$hash_{2} = hash(IP|hash_{1})$$               
+$$hash_{3} = hash(IP|hash_{2})$$               
 $$...$$              
 
 The client would count down from $$hash_{999}$$ but stop at $$hash_{2}$$. At which point after the client is authenticated, the server would require a password reset and a hash-count reset.
