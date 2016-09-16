@@ -1,6 +1,7 @@
 ---
 layout: post
 title: What if we had mutex revocation lists?
+comments: true
 type: post
 published: true
 status: publish
@@ -51,5 +52,3 @@ No, I don't think so. As the malware authors use these markers to check if they 
 they need to be either static within the version of the malware family that was published, or they need to be created by a generation algorithm such that each strain of the malware is able to query the mutex's existance. If this is the case, that logic could be reverse engineered and published to a backend such that an api call could test for a mutex family.
 
 Hence they are cornered into using either non-random naming, or choosing some other system infection marker such as the file system or network, which is much more heavily watched by most AV agents.
-
-*Questions + comments, contact via the links below.*

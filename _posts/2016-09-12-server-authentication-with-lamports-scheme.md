@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Lamport's Hash Chains for Server Authentication
+comments: true
 type: post
 published: true
 status: publish
@@ -55,5 +56,3 @@ $$IP|hash_{998}$$ is difficult (Even with poor choices like MD5 [[humbled-by-md5
 
 * The initial client sign-up is not at all protected via this scheme. [HSTS](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) is a great mitigation for this, but only if the site is on the browser [preload list](https://hstspreload.appspot.com/).
 * In this design, it is assumed that malware, phishing and dns hijacking are easier to perform than hijacking a statically allocated IP range. 
-
-*Again, questions + comments, contact via the links below.*
