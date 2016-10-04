@@ -20,7 +20,7 @@ the `/user/bin/chromium` startup script notes:
 # performed. In case of improper quoting anywhere in the file, a fatal error is
 # raised. Lines starting with a hash symbol (#) are skipped.
 ```
-Therefore to enable the "distiller" option from your chromium dropdown menu. 
+Therefore to enable the "Distill page" option from your chromium dropdown menu. 
 
 {% gist b8732fcb673613cd03d1ee25edec94c8 %}
 
