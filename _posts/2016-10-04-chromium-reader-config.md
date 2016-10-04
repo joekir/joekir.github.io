@@ -7,7 +7,7 @@ published: true
 status: publish
 ---
 
-Since firefox version 16ish they've had a [reader mode](https://support.mozilla.org/en-US/kb/firefox-reader-view-clutter-free-web-pages) available for sites.I really like it as it lets you read the content without all the blinky lights. As Google are advertising people, while they do have the ability to simplift the DOM, they don't make [the option](https://github.com/chromium/dom-distiller) a default for obvious reasons!
+Since firefox version 16-ish they've had a [reader mode](https://support.mozilla.org/en-US/kb/firefox-reader-view-clutter-free-web-pages) available for webpages. I really like it as it lets you read the content without all the blinky-light-clutter. As Google are advertising people, while they do have the ability to simplify the DOM, they don't make [the option](https://github.com/chromium/dom-distiller) the setting easily available for obvious reasons!
 
 Here's how to enable it in chrome/chromium.
 
