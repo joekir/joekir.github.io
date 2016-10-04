@@ -10,6 +10,7 @@ baseurl:
 
 gems:
   - jekyll-sitemap
+  - jekyll-gist
 
 sass:
   sass_dir: public/css
