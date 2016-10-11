@@ -24,4 +24,5 @@ $$HOTP = truncate(hmac(key,ctr|phishingSiteIP))$$
 
 The client compares the two and if they do not match, the client would have reason to believe they are not on the legitimate site and would not put in their client HOTP code. They could then safely follow up by reseting their password, while the 2nd factor protects their account from  attacker compromise.
 
-*I'm working on some sample code to demonstrate this flow, I'll update this post with a link at a later date.*
+****updated****    
+An implementation of this idea, using a chrome-extension and Node.js server-side code, can be found here - [https://github.com/joekir/veerless](https://github.com/joekir/veerless)
