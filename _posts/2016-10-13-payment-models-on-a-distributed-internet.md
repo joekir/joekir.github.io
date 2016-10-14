@@ -20,7 +20,7 @@ But how could the payment for the content work?
 
 1) **1 person pays, many people watch**
 
-We descend to how it is currently with torrents, someone takes the payment hit to obtain the content and the distributes it freely amongst the peers.  
+We descend to how it is currently with torrents, someone takes the payment hit to obtain the content and then distributes it freely amongst their peers.  
 
 One might recall that there are cryptographic approaches to allow multiple, specific users to decrypt a blob of data.
 
