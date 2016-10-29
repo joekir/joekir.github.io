@@ -11,6 +11,7 @@ baseurl:
 gems:
   - jekyll-sitemap
   - jekyll-gist
+  - jemoji
 
 sass:
   sass_dir: public/css

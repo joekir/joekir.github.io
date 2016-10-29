@@ -8,3 +8,4 @@ gem 'github-pages', versions['github-pages']
 gem 'jekyll'
 gem 'redcarpet'
 gem 'jekyll-gist'
+gem 'jemoji'
