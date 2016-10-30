@@ -14,13 +14,13 @@ categories:
 
 *What a fancy title!* :unamused:
 
-Just thought I'd throw it in there instead of saying "HSTS is great for some, at the expense of others!" I only just learned about this term during the first week of [this edX course](https://www.edx.org/course/cyber-security-economics-delftx-secon101x) on Cyber Security Economics. It's worth checking out.
+Just thought I'd throw it in there instead of saying "HSTS is great for some, at the expense of others!" I only just learned about this term [[1](http://www.investopedia.com/terms/p/pareto-efficiency.asp)] during the first week of [this edX course](https://www.edx.org/course/cyber-security-economics-delftx-secon101x) on Cyber Security Economics. It's worth checking out.
 
 I still find such few sites use HSTS (HTTP Strict Transport Security), fewer still use it with optimal settings.
 
 ### Why it's an excellent header for those that use it?
 
-##### HSTS level 1
+##### Basic HSTS
 
 If you have HSTS setup for your site, with a reasonable cache expiry time, say 1 year (31536000). For an attacker to pharm/phish your users they would need to :         
 - Compromise the DNS of one of your users.          
@@ -28,7 +28,7 @@ If you have HSTS setup for your site, with a reasonable cache expiry time, say 1
 
 The weakness of level 1 is that if they attack one of your users before they have ever visited your site, then they only need to satisfy option 1. As they could just server your site on http for the user.
 
-##### HSTS level 2 
+##### HSTS preload list 
 
 Same as above except you also add your domain to the preload list.
 [https://hstspreload.appspot.com/](https://hstspreload.appspot.com/)
