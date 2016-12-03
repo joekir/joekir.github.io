@@ -29,7 +29,7 @@ There are a couple of ways to do 'lookalikes':
 
 The reverse whois lookup for registrar : "CLOUDFLARE, INC." returns all of [these](http://viewdns.info/reversewhois/?q=CLOUDFLARE%2C+INC.){:target="_blank"}. 
 
-So they went to the length of purchasing "clloudfllare.com" however that isn't nearly as great of an attack as "cIoudflare.com" (notice that is actually an uppercase "i" in the second letter of the domain, the horrible thing about the more common webfonts like Arial is that they don't have kerning and they are often sans-serif, so it's very tricky to spot these frauds.  
+So they went to the length of purchasing "clloudfllare.com" however that isn't nearly as great of an attack as "cIoudflare.com" (notice that is actually an uppercase "i" in the second letter of the domain, the horrible thing about the more common webfonts like Arial is that they have little or no tracking, high kerning and they are often sans-serif. So it's very tricky to spot these frauds.  
 
 Here's an example of the one's that Elfin found that cloudflare should look into - [https://elfin.josephkirwin.com/search?q=cloudflare.com](https://elfin.josephkirwin.com/search?q=cloudflare.com){:target="_blank"}
 
