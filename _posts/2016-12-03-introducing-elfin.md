@@ -35,7 +35,7 @@ Here's an example of the one's that Elfin found that cloudflare should look into
 
 ### Conclusion
 
-Services like MarkMonitor can be very expensive and actually not comprohensive in acquiring all the domains that attackers may use to phish your customers. Instead I implore you to **go try elfin** (**it's free** ††) and see what homoglyph domain variants it can find for you!
+Services like MarkMonitor can be very expensive and actually not comprehensive in acquiring all the domains that attackers may use to phish your customers. Instead I implore you to **go try elfin** (**it's free** ††) and see what homoglyph domain variants it can find for you!
 
 **[https://elfin.josephkirwin.com](https://elfin.josephkirwin.com){:target="_blank"}**
 
