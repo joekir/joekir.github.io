@@ -42,6 +42,8 @@ Thanks to the independence of state management in the time based approach this a
 
 Something I overlooked? Other protections already available? Comment below :D
 
-
+##### Related Reading
+- [Alexa is not even remotely secure and really I dont care](https://gizmodo.com/alexa-is-not-even-remotely-secure-and-really-i-dont-car-1764761117)
+- [Tweet by Jeremiah Grossman](https://twitter.com/jeremiahg/status/818191812066033664)
 
 
