@@ -10,9 +10,9 @@ categories:
 - Veerless
 ---
 
-Over the past year I'd been digging into bi-directional 2FA for TOTP/HOTP style implementations (see [Veerless](https://veerless.josephkirwin.com/)). I did about it and since then I've been asked occasionally about my opinions on push-based 2FA solutions e.g. Duo Push or Okta Push.
+Over the past 6 months I researched bidirectional two-factor auth for TOTP/HOTP approaches (see [Veerless](https://veerless.josephkirwin.com/)). This year I spoke at a conference about it and since then I've been asked occasionally about my opinions on push-based 2FA solutions e.g. Duo Push or Okta Push.
 
-Henceforth in this post I'll refer to TOTP/HOTP style as "inline" and I'll refer to push-based/sms as "out-of-band". As to me these are the 2 general classes of 2FA.
+In the rest of this post I'll refer to TOTP/HOTP style as "inline" and I'll refer to push-based/sms as "out-of-band". As to me these are the 2 general classes of 2FA.
 
 ### Strengths of inline
 
@@ -36,7 +36,7 @@ My suspicion is that a there is a certain group of users that would confirm a pu
 
 ## A solution to bind cognition - Snap2FA
 
-*In the game of [snap](https://en.wikipedia.org/wiki/Slapjack#Snap) you an d your adversary turn over a face-down deck of cards until there are 2 consecutive matches, then you slam your hand on the pile saying "SNAP!"*
+*In the game of [snap](https://en.wikipedia.org/wiki/Slapjack#Snap) you and your adversary turn over a face-down deck of cards until there are 2 consecutive matches, then you slam your hand on the pile saying "SNAP!"*
 
 The proposed "Happy Path" flow:
 
