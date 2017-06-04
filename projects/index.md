@@ -14,3 +14,8 @@ title: Projects and Conference Talks
 
 * [FreeOTP Veerless integration](https://github.com/joekir/freeotp-android-veerless)     
 * [Veerless](https://github.com/joekir/veerless)
+
+## Slides
+
+* [2FA Demand Bidirectional](https://www.josephkirwin.com/2FA-Demand-Bidirectional/){:target="_blank"}
+* [An overview of Secure-Remote-Password Protocol](https://www.josephkirwin.com/srp-talk){:target="_blank"}
