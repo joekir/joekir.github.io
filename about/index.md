@@ -8,6 +8,4 @@ Joe's technical interests are in information security, cryptography, reverse eng
 
 When not doing the work stuff he might be found road cycling or rock climbing.
 
-For the über-top-secret-tinfoilers here's my PGP key:      
-[https://keys.mailvelope.com/pks/lookup?op=get&search=0xCC4FA098130D98C2](https://keys.mailvelope.com/pks/lookup?op=get&search=0xCC4FA098130D98C2){:target="_blank"}     
-my email is in the link below.
+For the `über-top-secret-tinfoilers` you can find my PGP in the [mit pgp search](https://pgp.mit.edu/pks/lookup?op=get&search=0xCC4FA098130D98C2){:target="_blank"} and email address in the link below.
