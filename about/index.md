@@ -4,7 +4,7 @@ credit: true
 title: About
 ---
 
-Joe's technical interests are in information security, cryptography, reverse engineering, software development and testing.
+Joe's technical interests are in information security, cryptography, reverse engineering, software development and testing. Résumé at [/resume](/resume)
 
 When not doing the work stuff he might be found road cycling or rock climbing.
 
