@@ -8,7 +8,7 @@ kramdown:
 url: http://www.josephkirwin.com
 baseurl:
 
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jemoji
