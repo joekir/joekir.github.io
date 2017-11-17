@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mitigating Catastrophic Backtracking in Node.js Regular Expressions
+title: Mitigating Catastrophic Backtracking in Node.js RegExp
 date: 2016-03-12 10:14:00 -08:00
 type: post
 published: true

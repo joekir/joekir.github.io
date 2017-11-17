@@ -30,7 +30,7 @@ Also, something I haven't confirmed is whether Google's vocal profiling only cov
    - Change per request. This is only truly viable if it's a single user household. You have a dictionary (size n) or names, with the user's name or other common names removed from it. You then have a random seed value (t) less than n that correlates to the current name of the device on this request. Then after each request you multiply t by some random constant, modulo n and this becomes the new t. So every request the trigger name would change.
 
   - Change per unit time. This is the option to go with in a multi-user household, and is essentially a variant of Time-Based-One-Time-Pad (you know like on the Google Authenticator thingy!), but with a modulo n to find the given index t into the dictionary of potential device names. <br><br>example request each side computes:<br><br>
-   $$TOTP = HMAC(secret  ||  \lfloor{(\frac{currentTime - initialTime}{timeStep})})$$
+   $$TOTP = HMAC(secret  ||  \lfloor{(\frac{currentTime - initialTime}{timeStep})}\rfloor)$$
    <br>
    $$ t = TOTP\bmod{n} $$
    <br><br>

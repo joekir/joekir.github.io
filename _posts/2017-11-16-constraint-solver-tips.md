@@ -29,15 +29,15 @@ Here's some tips I've learned that I think are useful, most of these stem from c
  
 2. Static Single Assignment (SSA)     
   In normal code we're used to seeing things like `a = a + 1` but constraint solver logic is more like maths where there is no assignment order, you can just check equalities. Therefore this would become :
-  ```
+  ~~~ python
   s = z3.Solver()
   a0, a1 = z3.BitVec("a0 a1", 32)
   s.add(a1 == a0 + 1)
-  ```
+  ~~~
   This is known as Static Single Assignment, I came across this by accident when I was modelling functions in Z3-python, and then later learned this is a common compiler term.
 3. Loops     
   You can unroll them if possible, but I figured out an interesting approach in Python that allows you to do some meta-programming, so one of the issues in a bounded loop with z3 solver item allocations is you don't know how many you're going to have to allocate, Say we have this silly Java example: 
-  ```
+  ~~~ java
   int foo(int a) {
       for(int i = 0; i < 10; i++){
         a += 6;
@@ -46,13 +46,13 @@ Here's some tips I've learned that I think are useful, most of these stem from c
       a *= 5;
       return a;
   }
-  ```
+  ~~~
   say we are given the return value is 320 and we want to know the input (obviously this is trivial and you could do it in your head, but this is to illustrate more of the bookkeeping than the solver power)   
   
     One of the issues here for SSA is how can we know how many a<sub>n</sub>'s to allocate for the assignments, and how can we then track what what a<sub>n</sub> we're on when we try to multiply by 5?
    
       Here's something I've found helpful in z3 python:
-      ```
+      ~~~ python
       import z3
       
       # just a helper to make it easier
@@ -79,9 +79,9 @@ Here's some tips I've learned that I think are useful, most of these stem from c
       check = s.check()
       if check.r == 1:
         print s.model()  
-      ```
+      ~~~
       This prints : 
-      ```
+      ~~~
       [a11 = 320,
        a10 = 64,
        a9 = 58,
@@ -94,16 +94,16 @@ Here's some tips I've learned that I think are useful, most of these stem from c
        a2 = 16,
        a1 = 10,
        a0 = 4]
-      ```
+      ~~~
   So we can see the original input for a was 4. 
   
-I've found this trick of dynamically naming variables and handling the bookkeeping in a Python map to be very effective. You could also use something like `aVars[aVars.keys()[-1]]` if you need the last one but I find it easier to keep a separate allocator count as we rarely need just the last element when we're doing the solver assertions.  
-
+    I've found this trick of dynamically naming variables and handling the bookkeeping in a Python map to be very effective. You could also use something like `aVars[aVars.keys()[-1]]` if you need the last one but I find it easier to keep a separate allocator count as we rarely need just the last element when we're doing the solver assertions.  
+    
 ### Covering old ground
 
 I wrote [this post](https://www.josephkirwin.com/2015/10/23/all_is_not_lost/) in 2015 on how to do simultaneous equations at the bit-level to invert shift-xor operations. The example from that post is easy to solve with z3
 
-```
+~~~ python
 import z3
 
 # solve:
@@ -117,4 +117,4 @@ s.add(((x >> 2) ^ x) == 8)
 check = s.check()
 if check.r == 1:
   print s.model() # prints [x = 10]
-```
+~~~
