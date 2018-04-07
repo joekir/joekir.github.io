@@ -24,7 +24,7 @@ This talk was deeper than the content I'm about to discuss as this is about the 
 
 After this talk there was a fever in open source land to fix these hashing issues in Ruby, PHP, Java etc. Allegedly the only language that knew of this already was Perl, and they'd kept the details to themselves since 2002 😂
 
-The one that still puzzles me is Microsoft's .NET framework (the lanuage I'm most familiar with the internals of), they use something that was patented by [Niels Fergurson](https://patents.google.com/patent/US2013026242) (who I greatly respect), it's distribution allegedly doesn't suffer the issues in the above talk, yet the hash appears to be invertible, so how can this be so? 
+The one that still puzzles me is Microsoft's .NET framework (the lanuage I'm most familiar with the internals of), they use something that was patented by [Niels Fergurson](https://patents.google.com/patent/US20130262421) (who I greatly respect), it's distribution allegedly doesn't suffer the issues in the above talk, yet the hash appears to be invertible, so how can this be so? 
 It's name is `Marvin` ([github link](https://github.com/dotnet/coreclr/blob/32f0f9721afb584b4a14d69135bea7ddc129f755/src/vm/marvin32.cpp#L219))
 
 # Back on Track
