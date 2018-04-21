@@ -151,14 +151,26 @@ footer {
 /*----------------------------------------------------------------------------*/
 
 .highlight {
-  padding: 10px;
-  border-radius: 6px;
-  background-color: #272822;
-  color: #f8f8f2;
+  padding: 4px;
+  border-radius: 3px;
+  // solarized-dark
+  background-color: #073642;
+  color: #eee8d5;
   line-height: 1;
+  margin-bottom: 0;
 
-  code {
-    font-size: .7rem;
+  pre{
+    padding: 1em;
+    overflow: auto;
+    word-wrap: break-word;
+    * span {
+      // override background syntax highlights
+      background-color: inherit !important;
+    }
+
+    code {
+      font-size: .7rem;
+    }
   }
 }
 

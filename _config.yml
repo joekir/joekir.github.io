@@ -1,9 +1,7 @@
-markdown: kramdown
 permalink: /:year/:month/:day/:title/
 
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+markdown: kramdown
+highlighter: rouge
 
 url: http://www.josephkirwin.com
 baseurl:
