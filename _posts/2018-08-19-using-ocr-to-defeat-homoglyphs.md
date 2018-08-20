@@ -28,11 +28,13 @@ I think this could be cool as a chrome extension, or something in email flow che
 
 _try out "grnail.com" and "josephkirwin.com" as examples of it in action, click view-source to see what it do_
 
-<script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/1.0.10/tesseract.min.js" integrity="sha256-Yg4eYEUSthKzFM/fE68KncKWRSzIRHjTYxGIYdbW90s=" crossorigin="anonymous"></script>
+
 Hostname: <input value="grnail.com" id="hostname" type="text" name="hostname"/>
 <button onclick="checkDomain()">Click to test</button><br/>
 OCR Result:<input readonly id="ocrResult"/><br/>
 Did they match?: <input readonly id="isMatch"/><br/><br/>
+<p id="working" style="display:none;">Processing...</p>
 <b>canvas</b>
 <canvas id="myCanvas" style="border:1px solid #000000;"></canvas>
 <script type="text/javascript">
@@ -49,10 +51,14 @@ Did they match?: <input readonly id="isMatch"/><br/><br/>
         ctx.font = "18px Arial";
         ctx.letterSpacing = "-1px";
         ctx.fillText(name,50,50);
-        
+
+        var working = document.getElementById('working');
+        working.style.display="block";
+
         Tesseract.recognize(canvas,{
             lang: 'eng'
         }).then(function(result){
+            working.style.display="none";
             var parsed = result.text.replace(/[\r\n]/g, '').replace(/[\s]/g,'.');
             document.getElementById("ocrResult").value = parsed;
 
