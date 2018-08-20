@@ -28,7 +28,7 @@ I think this could be cool as a chrome extension, or something in email flow che
 
 _try out "grnail.com" and "josephkirwin.com" as examples of it in action, click view-source to see what it do_
 
-<script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js' async></script>
+<script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
 Hostname: <input value="grnail.com" id="hostname" type="text" name="hostname"/>
 <button onclick="checkDomain()">Click to test</button><br/>
 OCR Result:<input readonly id="ocrResult"/><br/>
