@@ -26,6 +26,8 @@ I think this could be cool as a chrome extension, or something in email flow che
  
 ============== Below is an example you can play with =================
 
+**This seems to crash mobile browsers, at least firefox, chrome and brave on my android, so I'd recommend running on a laptop, presumably tesseract is memory hungry?**
+
 _try out "grnail.com" and "josephkirwin.com" as examples of it in action, click view-source to see what it do_
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/1.0.10/tesseract.min.js" integrity="sha256-Yg4eYEUSthKzFM/fE68KncKWRSzIRHjTYxGIYdbW90s=" crossorigin="anonymous"></script>
