@@ -21,5 +21,6 @@ title: Projects
 
 ### Slides
 
+* [The Emperor's Old Clothes - Visualizing ssdeep](https://docs.google.com/presentation/d/e/2PACX-1vTbRtG0z2zsvYaIv9EwSVunOjhuZoxZMmxfJhFPlLJwgC85JISulZgKm7w8bEaQHA/pub?start=true&loop=false&delayms=3000#slide=id.p21){:target="_blank"}
 * [2FA Demand Bidirectional](https://www.josephkirwin.com/2FA-Demand-Bidirectional/){:target="_blank"}
 * [An overview of Secure-Remote-Password Protocol](https://www.josephkirwin.com/srp-talk){:target="_blank"}
