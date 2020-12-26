@@ -10,6 +10,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jemoji
+  - jekyll-feed
 
 sass:
   sass_dir: public/css
@@ -19,3 +20,6 @@ twitter_username: josephkirwin
 github_username:  joekir 
 linkedin_username: joekirwin
 keybase_username: joekirwin
+
+author:
+  twitter: josephkirwin

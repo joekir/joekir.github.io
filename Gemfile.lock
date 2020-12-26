@@ -258,6 +258,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages (= 209)
   jekyll
+  jekyll-feed
   jekyll-gist
   jemoji
   redcarpet

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Security Reading List
 ---
 
@@ -14,7 +14,7 @@ title: Security Reading List
 |[The Art of Software Security Assessment](https://www.pearson.com/us/higher-education/program/Dowd-Art-of-Software-Security-Assessment-The-Identifying-and-Preventing-Software-Vulnerabilities/PGM306255.html){:target="\_blank"}|Vuln Hunting|If you want to someday to be able to read and comprehend a [Google Project Zero](https://googleprojectzero.blogspot.com/){:target="\_blank"} write-up then this is how you get ready for that. This is very comprehensive and used to be the required reading though perhaps in cloud security age it may be aging fast.|
 |[How to Measure Anything](https://www.howtomeasureanything.com/3rd-edition/){:target="\_blank"}|Quantification of Risk|Firstly, don't let the _"cheesyness"_ of the websites and quotes around this book discourage you. Sadly they do themselves no favours by making it look like some MLM scheme. This really is legit, and backed by basic mathematical foundations. Additionally the author later attempted an application of this to cybersecurity ([How to Measure Anything in Cybersecurity Risk](https://www.howtomeasureanything.com/cybersecurity/){:target="\_blank"}), I'd only recommmend that after reading the first book as it skips some of the fundamental points that are more useful than the domain-context exercise. <br><br>You'll (hopefully) reach an epiphany that currently in software development and security we model far too many things as a Boolean, when in fact everything has a confidence-interval. Risk estimation is not just about estimating the likelihood and impact of an event, but also your own (and your systems) confidence in what those estimates. Once you have those you can tolerate far more uncertainty while still prioritizing what needs to be worked on next.|
 
-## Security Books you <u>Should Not</u> Read
+### Security Books you <u>Should Not</u> Read
 
 _There are seriously too many to list, lots of bad ones, I think I've read about 20 bad security books._     
 _However, the obvious advice is never read **anything** by Kevin Mitnick._
