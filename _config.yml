@@ -3,7 +3,7 @@ permalink: /:year/:month/:day/:title/
 markdown: kramdown
 highlighter: rouge
 
-url: http://www.josephkirwin.com
+url: https://www.josephkirwin.com
 baseurl:
 
 plugins:
