@@ -4,8 +4,8 @@
 - url: /projects
   title: Projects
 
-- url: /about
-  title: About
-
 - url: /security-reading-list
   title: Security Reading List
+
+- url: /about
+  title: About
