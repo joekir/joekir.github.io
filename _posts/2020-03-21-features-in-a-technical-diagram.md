@@ -32,7 +32,7 @@ I didn't want to make the example trite or stupid so I've kept it generic, but t
 @startuml
 
 entity "entity A" as A
- package foo {
+package foo {
   class "entity B" as B
   class "entity C" as C
 }
