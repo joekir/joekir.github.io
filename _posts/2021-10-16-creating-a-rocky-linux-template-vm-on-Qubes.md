@@ -33,7 +33,7 @@ to move to RockyLinux as this provides that downstream distro stability that Cen
 7. Back in the Rocky installer GUI, go to the network configuration and locate the IPv4 settings for eth0, you'll need to switch
    from DHCP to manual, and plug in those values from step-6, additionally you'll need a DNS provider for the next step to work, so just use something like
    1.1.1.1 (cloudflare), 9.9.9.9 (IBM) or even 8.8.8.8 (Google) for sake of the install only.
-8. Now go to the failing setup for source installation and use this URL https://download.rockylinux.org/pub/rocky/8/BaseOS/x86_64/os/ or something similar to that depending on how quickly this guide ages ;)
+8. Now go to the failing setup for source installation and use this URL [https://download.rockylinux.org/pub/rocky/8/BaseOS/x86_64/os/](https://download.rockylinux.org/pub/rocky/8/BaseOS/x86_64/os/) or something similar to that depending on how quickly this guide ages ;)
 9. The rest should of the steps in the GUI should now be unblocked and your TemplateVM can be created 🎉
 
 I hope someone stumbles across this and finds it helpful!
