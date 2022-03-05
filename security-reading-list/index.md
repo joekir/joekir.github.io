@@ -5,6 +5,8 @@ title: Security Reading List
 
 ### Security Books You <u>Should</u> Read
 
+_I've had quite a few people that are new to the field of information security ask about some "key reads", so instead of replying with the same info each time I created a link to that for ease-of-reference (and I will keep this evergreen!)._
+
 | Title          | Topic					| Why |
 | :-------------|:------------- |:-----|
 |[Secure By Design](https://www.manning.com/books/secure-by-design){:target="\_blank"}|Application Security|If you are a developer, and you have to read only one of these books read this one. It will allow you to "design away" a huge swathe of vulnerabilities from the software you write, if you can achieve this you will be loved by your security team(s).|
