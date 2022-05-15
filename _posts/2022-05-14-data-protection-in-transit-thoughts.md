@@ -26,7 +26,7 @@ An additional pain point is that all the data attributes that we described above
 
 When it's in the database:
  
-{% mermaid %}
+<div class="mermaid">
 classDiagram
 	class Data{
 		data: Social Insurance Number
@@ -35,16 +35,16 @@ classDiagram
 		attribute: Storage Region
 		attribute: ...
 	}
-{% endmermaid %}
+</div>
 
 Once it's downloaded and being accessed by code:
 
-{% mermaid %}
+<div class="mermaid">
 classDiagram
 	class data {
 		Social Insurance Number
 	}
-{% endmermaid %}
+</div>
 
 Worse still, it's very common in technology businesses to have a piece of software download some data from one data store, massage and transform it, then upload it to some other data store.
 This target data store would then have all the risk and non of the declarative attributes needed so that security systems can protect the data effectively.
@@ -60,7 +60,7 @@ Use an authenticated pointer.
 I don't mean this at the language level, like in C. But it's a good analogy.
 This design seems to be reinvented countless times over in cloud software and therefore should probably be just called a pointer even though it's not in the same memory space.
 
-{% mermaid %}
+<div class="mermaid">
 classDiagram
 	Data <|-- Pointer
 
@@ -77,7 +77,7 @@ classDiagram
 		pointer: *Data
 		attribute: expiry
 	}
-{% endmermaid %}
+</div>
 
 Here the authorization occurs at time of "dereferencing" the pointer to access the data, so whatever system does that for you will need to know how to apply the authorization policy based upon the declarative attributes of the `Data`.
 

@@ -6,15 +6,11 @@ highlighter: rouge
 url: https://www.josephkirwin.com
 baseurl:
 
-mermaid:
-  src: 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.1.1/mermaid.min.js'
-
 plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jemoji
   - jekyll-feed
-  - jekyll-mermaid
 
 sass:
   sass_dir: public/css
