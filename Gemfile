@@ -9,8 +9,9 @@ versions = JSON.parse(Net::HTTP.get(URI('https://pages.github.com/versions.json'
 # 2nd arg is a ratchet to ensure it's at least current version when I last looked at it
 gem 'github-pages', versions['github-pages'], '>= 226'
 gem 'jekyll'
-gem 'redcarpet'
-gem 'jekyll-gist'
-gem 'jemoji'
 gem 'jekyll-feed'
-gem "webrick", "~> 1.7"
+gem 'jekyll-gist'
+gem 'jekyll-toc'
+gem 'jemoji'
+gem 'redcarpet'
+gem 'webrick', '>= 1.7'

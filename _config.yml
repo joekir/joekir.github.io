@@ -3,14 +3,25 @@ permalink: /:year/:month/:day/:title/
 markdown: kramdown
 highlighter: rouge
 
+# See https://jekyllrb.com/docs/variables/
 url: https://www.josephkirwin.com
+title_image: https://www.josephkirwin.com/public/images/logo.jpg
 baseurl:
 
 plugins:
-  - jekyll-sitemap
-  - jekyll-gist
-  - jemoji
+  - jekyll-toc
   - jekyll-feed
+  - jekyll-gist
+  - jekyll-sitemap
+  - jemoji
+
+# Table-Of-Content settings
+toc:
+ min_level: 1
+ max_level: 3
+ list_class: toc
+ list_class: toc__list
+ sublist_class: toc__sublist
 
 sass:
   sass_dir: public/css

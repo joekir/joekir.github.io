@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Separation of concerns between code and service layout 
-comments: true
 type: post
 published: true
 status: publish
+toc: true
 ---
 
 No doubt, when I write this (assuming someone reads it) someone might say:

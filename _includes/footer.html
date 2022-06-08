@@ -1,16 +1,3 @@
-{% if layout.comments %}
-<div id="disqus_thread"></div>
-<script>
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://josephkirwin-com.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<br/>
-{% endif %}
 {% if site.twitter_username %}
     <a href="https://twitter.com/{{ site.twitter_username }}">
       <i class="fa fa-twitter fa-2x" aria-hidden="true"></i> Twitter

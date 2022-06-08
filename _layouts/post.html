@@ -1,17 +1,14 @@
 ---
 layout: default
-comments: true
+comments: false
 ---
-
 <article class="single row gutters">
   <time class="published" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time>
   <h2>{{ page.title }}</h2>
 
+  {% toc %}
   {{ content }}
 </article>
 
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.1/es5/tex-mml-chtml.min.js" integrity="sha512-lt3EkmQb16BgAXR0iCk+JUJyDFmS9NZEMXCXK169qQoWcXu9CS4feejtxkjjUruw/Y0XfL1qxh41xVQPvCxM1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.1.1/mermaid.min.js" integrity="sha512-7AtDHIWTEL1Km2V9clac6gs1x3F67rS6HGZMBYaUogsohvODnWrq5GkW9WRh1XjTMs4Um9hjGUNSjI+3XluoZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
