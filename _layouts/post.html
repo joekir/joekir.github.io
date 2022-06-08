@@ -8,7 +8,31 @@ toc: false
   <h2>{{ page.title }}</h2>
 
   {{ content }}
+  <ul class="share-buttons">
+    <li id="listCaption">Sharing Options</li>
+    <li><a
+        href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via={{ site.twitter_username }}"
+        target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span
+          class="sr-only">Tweet</span></a></li>
+    <li><a href="https://getpocket.com/save?url={{ site.url }}{{ page.url }}" target="_blank" title="Add to Pocket"><i
+          class="fab fab fa-get-pocket fa-2x" aria-hidden="true"></i><span class="sr-only">Add to
+          Pocket</span></a></li></a></li>
+    <li><a href="https://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank"
+        title="Submit to Reddit"><i class="fab fa-reddit-square fa-2x" aria-hidden="true"></i><span
+          class="sr-only">Submit to Reddit</span></a></li>
+    <li><a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" target="_blank"
+        title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on
+          LinkedIn</span></a></li>
+    <li><a href="https://news.ycombinator.com/submitlink?u={{ site.url }}{{ page.url }}&t={{ page.title }}"
+        target="_blank" title="Share on Hacker News"><i class="fab fa-hacker-news fa-2x" aria-hidden="true"></i><span
+          class="sr-only">Share on LinkedIn</span></a></li>
+  </ul>
 </article>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.1/es5/tex-mml-chtml.min.js" integrity="sha512-lt3EkmQb16BgAXR0iCk+JUJyDFmS9NZEMXCXK169qQoWcXu9CS4feejtxkjjUruw/Y0XfL1qxh41xVQPvCxM1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.1.1/mermaid.min.js" integrity="sha512-7AtDHIWTEL1Km2V9clac6gs1x3F67rS6HGZMBYaUogsohvODnWrq5GkW9WRh1XjTMs4Um9hjGUNSjI+3XluoZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.1/es5/tex-mml-chtml.min.js"
+  integrity="sha512-lt3EkmQb16BgAXR0iCk+JUJyDFmS9NZEMXCXK169qQoWcXu9CS4feejtxkjjUruw/Y0XfL1qxh41xVQPvCxM1A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.1.1/mermaid.min.js"
+  integrity="sha512-7AtDHIWTEL1Km2V9clac6gs1x3F67rS6HGZMBYaUogsohvODnWrq5GkW9WRh1XjTMs4Um9hjGUNSjI+3XluoZQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
