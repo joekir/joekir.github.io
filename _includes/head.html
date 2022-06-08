@@ -21,6 +21,7 @@
 
 <!-- Google fonts -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin-ext">
+<meta name="google-site-verification" content="i13iWRV96LVYYAkNh_bPf_lgo3EkTjevLB34aWfQ4RU" />
 
 <!-- favicon -->
 <link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/public/images/favicon.ico">
@@ -29,3 +30,18 @@
 <link rel="alternate" href="{{ site.url }}{{ site.baseurl }}/feed.xml" type="application/rss+xml" title="{{ site.data.brume.name }}">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<!-- twitter card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@josephkirwin" />
+<meta name="twitter:creator" content="@josephkirwin" />
+
+{% if page.title %}
+  <meta name="twitter:title" content="{{ page.title }}">
+{% endif %}
+
+{% if page.largeimage %}
+  <meta name="twitter:image:src" content="{{ site.url }}{{ page.largeimage }}">
+{% else %}
+  <meta name="twitter:image:src" content="{{ site.title_image }}">
+{% endif %}

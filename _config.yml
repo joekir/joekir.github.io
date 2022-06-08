@@ -3,9 +3,12 @@ permalink: /:year/:month/:day/:title/
 markdown: kramdown
 highlighter: rouge
 
-# See https://jekyllrb.com/docs/variables/
+# necessary for Twitter Card:
 url: https://www.josephkirwin.com
+description: A blog about Information Security and other ramblings.
 title_image: https://www.josephkirwin.com/public/images/logo.jpg
+twitter_username: josephkirwin
+
 baseurl:
 
 plugins:
@@ -18,7 +21,6 @@ sass:
   sass_dir: public/css
   style: :compressed
 
-twitter_username: josephkirwin
 github_username:  joekir 
 linkedin_username: joekirwin
 keybase_username: joekirwin
