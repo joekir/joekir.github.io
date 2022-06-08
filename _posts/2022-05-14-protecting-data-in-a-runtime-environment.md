@@ -3,10 +3,11 @@ layout: post
 published: true
 status: publish
 title: 'Protecting data in a runtime environment: Overview'
-toc: true
 type: post
 largeimage: /assets/cat_bag_1.jpg
 ---
+* Do not remove this line (it will not be displayed)
+{:toc}
 
 People (me) often forget that <u>Information Security</u> (the field that I work in) has the word "**Information**" at the front of it. The reason it's there is that _at the end of the day_ the only thing that matters is ensuring that only the authorized people or services have access to the data that they're supposed to.
 

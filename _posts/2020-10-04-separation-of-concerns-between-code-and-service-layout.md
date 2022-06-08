@@ -6,6 +6,8 @@ published: true
 status: publish
 toc: true
 ---
+* Do not remove this line (it will not be displayed)
+{:toc}
 
 No doubt, when I write this (assuming someone reads it) someone might say:
 

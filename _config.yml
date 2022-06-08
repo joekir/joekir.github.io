@@ -12,16 +12,7 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-sitemap
-  - jekyll-toc
   - jemoji
-
-# Table-Of-Content settings
-toc:
- min_level: 1
- max_level: 3
- list_class: toc
- list_class: toc__list
- sublist_class: toc__sublist
 
 sass:
   sass_dir: public/css

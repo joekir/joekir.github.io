@@ -317,38 +317,24 @@ dl,
 }
 
 @media all and (max-width: 768px){
-  .toc__list {
+  #markdown-toc {
       display: none;
   }
 }
 
-.toc__list:before {
-  content: "Table Of Contents";
-  font-size: 1.5rem;
- }
- 
- .toc__list {
-  float: right;
-  border: 2px solid #eee;
-  border-radius: 4px;
-  line-height: 1.8rem;
-  padding: 1rem 1.5rem;
-  font-weight: 600;
-  max-width: 20rem;
- }
- 
- .toc__sublist li {
-  padding-left: 1.25rem;
- }
- 
- .toc-h2:first-child {
-  margin-top: 1rem;
- }  
- 
- #toc a {
-  color: #568203;
- }
- 
- #toc a:hover {
-  color: #333;
- }
+#markdown-toc {
+ float: right;
+ border: 2px solid #eee;
+ border-radius: 4px;
+ line-height: 1.8rem;
+ padding: 1rem 1.5rem;
+ max-width: 20rem;
+}
+
+#markdown-toc li a {
+ color: $avocado-accent-color;
+}
+
+#markdown-toc li a:hover {
+ color: $contrast-color;
+}
