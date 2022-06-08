@@ -9,10 +9,10 @@ title_image: https://www.josephkirwin.com/public/images/logo.jpg
 baseurl:
 
 plugins:
-  - jekyll-toc
   - jekyll-feed
   - jekyll-gist
   - jekyll-sitemap
+  - jekyll-toc
   - jemoji
 
 # Table-Of-Content settings
