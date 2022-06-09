@@ -42,6 +42,12 @@
 
 {% if page.largeimage %}
   <meta name="twitter:image:src" content="{{ site.url }}{{ page.largeimage }}">
+  <!-- Linkedin/Facebook use OpenGraph -->
+  <meta property="og:image" content="{{ site.url }}{{ page.largeimage }}">
+  <meta property="og:image:secure_url" content="{{ site.url }}{{ page.largeimage }}">
 {% else %}
   <meta name="twitter:image:src" content="{{ site.title_image }}">
+  <meta property="og:image" content="{{ site.title_image }}">
+  <meta property="og:image:secure_url" content="{{ site.title_image }}">
 {% endif %}
+
