@@ -2,7 +2,7 @@
 layout: post
 published: true
 status: publish
-title: 'Protecting data in a runtime environment: Overview'
+title: 'Protecting data in a runtime environment: Part 1 - Overview'
 type: post
 largeimage: /assets/cat_bag_1.jpg
 ---
