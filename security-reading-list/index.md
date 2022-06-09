@@ -18,5 +18,4 @@ _I've had quite a few people that are new to the field of information security a
 
 ### Security Books you <u>Should Not</u> Read
 
-_There are seriously too many to list, lots of bad ones, I think I've read about 20 bad security books._     
-_However, the obvious advice is never read **anything** by Kevin Mitnick._
+_There are seriously too many to list, lots of bad ones, I think I've read about 20 bad security books. However, the obvious advice is never read **anything** by Kevin Mitnick._
