@@ -69,14 +69,31 @@ Ok, so what's bad?
 
 ### What do I do to protect myself?
 
-_depends who you are, if you work on a browser team maybe figure out how to protect the whole community..._
+**Browser Users**
 
 Don't use browser extensions. The only one you actually need is an adblocker, to achieve this without a Browser Extension here's the recommendations (either would suffice):
   - Use [Brave Browser](https://brave.com) with its built-in adblocker (it's Chromium under the hood anyway).
   - Use a custom DNS resolver such as [NextDNS](https://nextdns.io/?from=jsbhvf3z) or host it yourself on a [pi-hole](https://pi-hole.net/) to drop the DNS for advertising domains.
 
+**Website Owners**
+
+Be aware that you can't do anything to protect your customers from this threat.
+If they start reporting anomalous thefts and blaming you, at least add this discussion to your support troubleshooting list.
+
+Btw you can't enumerate the list of browser-extensions present for privacy reasons, I can attest after having exhaustively tried.
+
+**Browser Developers**
+
+Figure out a solution? I made some suggestions here that weren't well received:
+* [https://bugzilla.mozilla.org/show_bug.cgi?id=1629624](https://bugzilla.mozilla.org/show_bug.cgi?id=1629624)
+* [https://bugs.chromium.org/p/chromium/issues/detail?id=1070315](https://bugs.chromium.org/p/chromium/issues/detail?id=1070315)
+
+Time to use those brains and come up with a genius solution to this mess for consumers.
+
 ### Some recent improvements
+
+No, the problem is <u>still</u> here, a malicious browser extension can still steal any of your data, regardless of what the website does to help protect you. But there's been a few changes that at least make the maliciousness more gauche and (theoretically) detectable by the AppStores. That being said, the [2018 announcement to ban obfuscation](https://blog.chromium.org/2018/10/trustworthy-chrome-extensions-by-default.html) doesn't seem to have made any difference, I flagged an app the other day using [jscrambler](https://jscrambler.com/) the other day.
 
 In [Manifest V3](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/) some safety changes have landed, such as not allowing remote script to execute in an extension!! I didn't actually know that was allowed in V2... how was that ever thought to be a good idea from Chrome/Firefox store review perspective?!
 
-Background Scripts are now replaced with Service Workers, however no changes to where content scripts can be injected or adherence to CSP.
+Background Scripts are now replaced with Service Workers; however, no changes to where content scripts can be injected or adherence to CSP.
