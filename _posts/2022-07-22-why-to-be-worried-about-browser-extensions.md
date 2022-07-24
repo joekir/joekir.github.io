@@ -4,7 +4,7 @@ published: true
 status: publish
 title: 'Why to be concerned about Browser Extensions?'
 type: post
-largeimage: /assets/horse.jpg
+largeimage: /assets/horse.png
 ---
 
 _I don't care about the tech stuff [skip](#what-do-i-do-to-protect-myself) to the safety recommendations._
