@@ -85,8 +85,8 @@ Btw you can't enumerate the list of browser-extensions present for privacy reaso
 **Browser Developers**
 
 Figure out a solution? I made some suggestions here that weren't well received:
-* [https://bugzilla.mozilla.org/show_bug.cgi?id=1629624](https://bugzilla.mozilla.org/show_bug.cgi?id=1629624)
-* [https://bugs.chromium.org/p/chromium/issues/detail?id=1070315](https://bugs.chromium.org/p/chromium/issues/detail?id=1070315)
+* [bugzilla](https://bugzilla.mozilla.org/show_bug.cgi?id=1629624)
+* [bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/detail?id=1070315)
 
 Time to use those brains and come up with a genius solution to this mess for consumers.
 
