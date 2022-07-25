@@ -58,7 +58,7 @@ Ok, so what's bad?
 
 1. While a website (your kitchen store) can control where the iframe can send data, **by design** Browser Extensions are EXEMPT from this policy!! 
     !["I do what I want"](/assets/i-will-do-what-i-want.gif)
-2. the extension's [content scripts](https://developer.chrome.com/docs/extensions/mv3/content_scripts/) can be loaded into any and all frames in the browser with simple bit of seemingly-innocuous config:
+2. The extension's [content scripts](https://developer.chrome.com/docs/extensions/mv3/content_scripts/) can be loaded into any and all frames in the browser with simple bit of seemingly-innocuous config:
 ```json
 {
     ...
@@ -66,7 +66,10 @@ Ok, so what's bad?
     ...
 }
 ```
-3. Through a well-defined communication mechanism the `content.js` script is able to exfiltrate any data it can access out to `malicious_backend.js`, and that script is then free to exfiltrate data from the browser to a domain of the attacker's choosing :(
+3. Through the combination of content-scripts being injected into all frames (above) and the concept of a [background script](https://developer.chrome.com/docs/extensions/mv2/background_pages/) (or now in Manifest-V3 [service worker](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-migration/#man-sw)) security controls such as Same-Origin-Policy ([SOP](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)) do not apply to any of the extension's JavaScript code.         
+    This control usually helps protect from malicious script in a parent frame "DOM walking" into the child frame. A malicious extension may simply use the well-defined [communication mechanism](https://developer.chrome.com/docs/extensions/mv3/messaging/) to exfiltrate any data a given `content.js` scope has access to out to `malicious_backend.js`, and that background worker is then free to exfiltrate data from the browser to a domain of the attacker's choosing :(      
+
+    N.B. if extension `content.js` scripts in two different frames need to communicate/coordinate with each other they can simply proxy through the `malicious_backend.js`.
 
 ### What do I do to protect myself?
 
