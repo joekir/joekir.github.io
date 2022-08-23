@@ -10,9 +10,9 @@ categories:
 tags:
 - passwords
 - Security
-excerpt: a footnote to the blogpost http://malwarejake.blogspot.ca/2015/10/why-is-length-complexity-because-math.html
+excerpt: a footnote to the blogpost https://malwarejake.blogspot.com/2015/10/why-is-length-complexity-because-math.html
 ---
-In response to [http://malwarejake.blogspot.ca/2015/10/why-is-length-complexity-because-math.html](http://malwarejake.blogspot.ca/2015/10/why-is-length-complexity-because-math.html)
+In response to [http://malwarejake.blogspot.ca/2015/10/why-is-length-complexity-because-math.html](https://malwarejake.blogspot.com/2015/10/why-is-length-complexity-because-math.html)
 
 Jake - Thanks, I think the blog post was needed, I've been preaching that line for a while!
 
