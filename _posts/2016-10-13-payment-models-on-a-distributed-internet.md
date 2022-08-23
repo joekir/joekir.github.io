@@ -12,7 +12,7 @@ categories:
 
 I really think [ipfs.io](https://ipfs.io) (**not** ipfs.com) is an excellent concept, the execution is slick and the research of prior efforts in that direction are diligent.
 
-Recently I [listened to Juan Bennett](http://5by5.tv/changelog/204) talk about IPFS and some examples on the changelog podcast. He gave examples of IRC on top of IPFS, which is a very compelling dynamic content story. IPFS for free static content isn't a conceptual reach either.
+Recently I [listened to Juan Bennett](https://changelog.com/podcast/204) talk about IPFS and some examples on the changelog podcast. He gave examples of IRC on top of IPFS, which is a very compelling dynamic content story. IPFS for free static content isn't a conceptual reach either.
 
 However, there are some things that exist in the current server-client internet that are tough to conceptualize if we move from HTTP to IPFS. Take the example of a movie that I want to stream from Netflix. Getting a large media file from a local peer would be really great speed improvement and would ease the load on the Internet backbone even if peer-to-peer was used for media streaming alone [[1](https://variety.com/2015/digital/news/netflix-bandwidth-usage-internet-traffic-1201507187/)].
 
