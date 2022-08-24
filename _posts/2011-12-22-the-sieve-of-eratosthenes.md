@@ -33,14 +33,14 @@ tags: []
 </ul>
 <p><strong>Here's the code for the console app</strong></p>
 
-``` csharp
+```csharp
  class Program {
         //Give a true or false if a number is a prime
         static bool IsPrimeNumber(Int64 num) {
             bool boolprime = true;
             Int64 factor = num / 2;
             Int64 i = 0;
-            for (i = 2; i &lt;= factor; i++) {
+            for (i = 2; i <= factor; i++) {
                 if ((num % i) == 0) {
                     boolprime = false;
                 }
@@ -51,7 +51,7 @@ tags: []
         static void Main(string[] args) {
             //Set the number that you want to find the prime factors
             const Int64 max = 600851475143;
-            for (Int64 p = 2; p &lt; max; p++) {
+            for (Int64 p = 2; p < max; p++) {
                 if (IsPrimeNumber(p) == true) {
                     if ((max % p) == 0) {
                         Console.WriteLine(p);
