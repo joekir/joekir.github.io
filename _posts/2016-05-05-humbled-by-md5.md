@@ -56,7 +56,7 @@ When dealing with apk signing, the directory of interest inside the apk is:
 
 The CERT.SF contains digests of all the objects that need to be signed, these are SHA1 or better usually. This somewhat duplicates the MANIFEST.MF contents and even contains a digest of the manifest itself. CERT.RSA is then the signature over CERT.SF. (Note the hashing is used, as digital signatures can only sign a limited amount of data efficiently and hashing helps thunk the size down) 
 
-_If (unlike linux) for you more is better than less you can checkout [nelenkov's blog](https://nelenkov.blogspot.ca/2013/04/android-code-signing.html?view=classic) for very detailed info on this topic._
+_If (unlike linux) for you `more` is better than `less` you can checkout [nelenkov's blog](https://nelenkov.blogspot.ca/2013/04/android-code-signing.html?view=classic) for very detailed info on this topic._
 
 ### Why I think Google's decision to not upgrade MD5 is a fine and secure one
 
