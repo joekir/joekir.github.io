@@ -311,6 +311,10 @@ dl,
     margin-bottom: 30px;
   }
 
+  .container {
+    max-width: revert;
+  }
+
   #logo {
     background-position: center center;
   }
