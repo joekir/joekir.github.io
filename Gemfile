@@ -7,8 +7,8 @@ require 'net/http'
 versions = JSON.parse(Net::HTTP.get(URI('https://pages.github.com/versions.json')))
 
 # 2nd arg is a ratchet to ensure it's at least current version when I last looked at it
-gem 'github-pages', versions['github-pages'], '>= 226'
-gem 'jekyll'
+gem 'github-pages', versions['github-pages'], '>= 227'
+gem 'jekyll', '>= 3.9.2'
 group :jekyll_plugins do
     gem 'jekyll-feed'
     gem 'jekyll-gist'
