@@ -7,7 +7,7 @@ highlighter: rouge
 url: https://www.josephkirwin.com
 description: A blog about Information Security and other ramblings.
 title_image: https://www.josephkirwin.com/public/images/logo.jpg
-twitter_username: josephkirwin
+mastodon_username: '@joek@infosec.exchange'
 
 baseurl:
 
@@ -24,6 +24,3 @@ sass:
 github_username:  joekir 
 linkedin_username: joekirwin
 keybase_username: joekirwin
-
-author:
-  twitter: josephkirwin
