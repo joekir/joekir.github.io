@@ -3,6 +3,11 @@ layout: default
 title: Projects
 ---
 
+### Projects
+
+* [selinuxuser.land](https://selinuxuser.land){:target="_blank"} : guidance, best-practices and gotchas on crafting SELinux policies.
+* [algoexplore.ca](https://algoexplore.ca){:target="_blank"} : A d3.js/SVG web framework for visualizing binary algorithms.
+
 ### Conference Talks
 
 | Date          | Place					| Topic (with video link if available) |
@@ -18,8 +23,3 @@ title: Projects
 * [The Emperor's Old Clothes - Visualizing ssdeep](https://docs.google.com/presentation/d/e/2PACX-1vTbRtG0z2zsvYaIv9EwSVunOjhuZoxZMmxfJhFPlLJwgC85JISulZgKm7w8bEaQHA/pub?start=true&loop=false&delayms=3000#slide=id.p21){:target="_blank"}
 * [2FA Demand Bidirectional](https://www.josephkirwin.com/2FA-Demand-Bidirectional/){:target="_blank"}
 * [An overview of Secure-Remote-Password Protocol](https://www.josephkirwin.com/srp-talk){:target="_blank"}
-
-### Projects
-
-* [algoexplore.ca](https://algoexplore.ca){:target="_blank"} : A d3.js/SVG web framework for visualizing binary algorithms
-* [selinuxuser.land](https://selinuxuser.land){:target="_blank"} : guidance, best-practices and gotchas on crafting SELinux Policies
