@@ -117,3 +117,5 @@ Similarly if this data should be written to some other data store, that data sto
 In reviewing available tooling to support this last case described I've come up empty.
 I had a hunch that maybe some RASP ([Runtime Application Self Protection](https://en.wikipedia.org/wiki/Runtime_application_self-protection)) might have something like this or a way to extend to add, but nothing I found covered this angle.
 If the reader is aware of such a framework please comment and share the knowledge! 
+
+[Click here](/2022/05/24/part-2-protecting-data-in-a-runtime-environment/) to read part 2 of this post!
