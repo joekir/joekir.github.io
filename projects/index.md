@@ -23,8 +23,3 @@ title: Projects
 * [The Emperor's Old Clothes - Visualizing ssdeep](https://docs.google.com/presentation/d/e/2PACX-1vTbRtG0z2zsvYaIv9EwSVunOjhuZoxZMmxfJhFPlLJwgC85JISulZgKm7w8bEaQHA/pub?start=true&loop=false&delayms=3000#slide=id.p21){:target="_blank"}
 * [2FA Demand Bidirectional](https://www.josephkirwin.com/2FA-Demand-Bidirectional/){:target="_blank"}
 * [An overview of Secure-Remote-Password Protocol](https://www.josephkirwin.com/srp-talk){:target="_blank"}
-
-### Unrelated Links
-
-- Find answers to [What is EDM?](https://www.provos.org/p/what-is-edm/) - explaining the history and different genres
-- Curious about [What is Indie Music?](https://www.provos.org/p/what-is-indie-music/) - a very detailed article on the evolution and examples of genre shaping tracks
