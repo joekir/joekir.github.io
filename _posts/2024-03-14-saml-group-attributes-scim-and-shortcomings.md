@@ -61,7 +61,7 @@ Here is something worth calling out with these two approaches. If you want to ha
 
 ### A New Hope? 
 
-A more modern approach appears to be coming from the OpenID [Shared Signals Working Group](https://openid.net/wg/sharedsignals/) through something called "Continual Access Evaluation Profile"[^3], which appears to have a primary focus around AuthN in the SP, but it could have potentials to also address stale AuthZ as discussed in this post.
+A more modern approach appears to be coming from the OpenID [Shared Signals Working Group](https://openid.net/wg/sharedsignals/) through something called "Continual Access Evaluation Profile"[^3], which appears to have a primary focus around AuthN consistency in the SP, but it could have potential to also address stale AuthZ as discussed in this post.
 <br/>
 <br/>
 
