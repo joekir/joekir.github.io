@@ -44,11 +44,11 @@ sequenceDiagram
 
     autonumber
     
-    idp ->> sp: Push updates for user:0139
-    sp -->> sp: update mappings user:0139 entity with changes
-    idp -->> idp: admin changes group attributes on user:0139
+    idp ->> sp: Push updates for user:0117
+    sp -->> sp: update mappings user:0117 entity with changes
+    idp -->> idp: admin changes group attributes on user:0117
     Note over idp,sp: many days pass ...
-    Note right of sp: sp: we don't seem to have any updates on this user:0139, do we leave as is, deactivate?
+    Note right of sp: sp: we don't seem to have any updates on <br/> this user:0117, do we leave as is, deactivate?
 </div>
 
 I think having a heartbeat/freshness policy in SCIM would be ideal, whereby the IdP could say "if you don't hear from me in by this time, do this with the user", then there is no ambiguity on the sync delays.
