@@ -24,7 +24,7 @@ where:
 "~" represents the binary complement    
 "-" represents the binary negative, aka 2s complement of the number.   
  
-Looks really bizarre but feels like it should make sense. I rooted about on Google search to find the proof, but either couldn't find it, or more likely didn't have my search terms fine tuned! (See [http://www.woodmann.com/searchlores/](http://www.woodmann.com/searchlores/))
+Looks really bizarre but feels like it should make sense. I rooted about on Google search to find the proof, but either couldn't find it, or more likely didn't have my search terms fine tuned! (See [http://www.woodmann.com/searchlores/](https://web.archive.org/web/20200204121701/http://www.woodmann.com/searchlores/))
 
 Here's the forward proof I came to. (using '=' to mean comparison not assignment here)
 
