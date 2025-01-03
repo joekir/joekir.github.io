@@ -75,9 +75,7 @@ Ok, so what's bad?
 
 **Browser Users**
 
-Don't use browser extensions. The only one you actually need is an adblocker, to achieve this without a Browser Extension here's the recommendations (either would suffice):
-  - Use [Brave Browser](https://brave.com) with its built-in adblocker (it's Chromium under the hood anyway).
-  - Use a custom DNS resolver such as [NextDNS](https://nextdns.io/?from=jsbhvf3z) or host it yourself on a [pi-hole](https://pi-hole.net/) to drop the DNS for advertising domains.
+Limit your usage of browser extensions. The only one you actually need (Because "The advertising company" also makes Chrome/Chromium) is an adblocker, to achieve this without a browser extension you can use a custom DNS resolver such as [NextDNS](https://nextdns.io/?from=jsbhvf3z) or host it yourself on a [pi-hole](https://pi-hole.net/) to drop the DNS for advertising domains.
 
 **Website Owners**
 
