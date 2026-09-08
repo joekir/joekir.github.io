@@ -2,11 +2,6 @@
 layout: post
 title: Rethinking the PR Review Flow for LLM-Generated Bug Fixes
 ---
-> _“A wizard is never late, nor is he early; he arrives precisely when he means to” ~ Olórin aka Mithrandir aka Gandalf._  
-
-In answer to why I took 2 years to write a new blog post...
-
-# Rethinking the PR Review Flow for LLM-Generated Bug Fixes
 
 As a security engineer, some percentage of my job involves finding bugs in code I don't own. 
 LLMs have made that part faster. What's coming next is LLMs proposing the fixes too, and that's where things get complicated.
